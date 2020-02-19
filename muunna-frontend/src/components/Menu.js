@@ -1,10 +1,10 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap'
+import { Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap'
 
 const Menu = () => {
     return (
         <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">Muunna.com</Navbar.Brand>
+        <Navbar.Brand href="#home">Lukumuuntimet</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -13,10 +13,6 @@ const Menu = () => {
             <Nav.Link href="#link">Raha</Nav.Link>
             <Nav.Link href="#link">Huvi</Nav.Link>
             <Nav.Link href="#link">Hyöty</Nav.Link>
-            <NavDropdown title="Lisätietoa" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Puuttuva muunnin / laskuri?</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Sivustosta</NavDropdown.Item>
-            </NavDropdown>
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Haku" className="mr-sm-2" />
