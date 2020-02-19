@@ -6,9 +6,19 @@ const BinaryConverter = () => {
 
     const convertBinToDec = (bin) => {
         setBinary(bin)
-        const convertedDecimal = parseInt((bin + '').replace(/[^01]/gi, ''), 2)
-        setDecimal(convertedDecimal)
+        for(let i = 0; i < bin.length; i++) {
+            if(bin.charAt(i) !== '0' && bin.charAt(i) !== '1') {
+                console.log(bin.charAt(i))
+                setDecimal('Virheellinen binääriluku!')
+                break
+            } else {
+                const convertedDecimal = parseInt((bin + '').replace(/[^01]/gi, ''), 2)
+                setDecimal(convertedDecimal)
+            }
+        }
         console.log(binary, decimal)
+        console.log(typeof(bin))
+        console.log(bin.length)
     }
 
     return (
@@ -18,10 +28,12 @@ const BinaryConverter = () => {
             </h2>
             <div>
                 <form>
-                    <input value={binary} onChange={({target}) => convertBinToDec(target.value)}>
-                    </input>
+                    <p>
+                        Syötä binääriluku: <input value={binary} onChange={({target}) => convertBinToDec(target.value)}>
+                        </input>
+                    </p>
                 </form>
-                {isNaN(decimal) ? <p></p> : <p>{binary} on desimaalilukuna {decimal}</p>}
+                {isNaN(decimal) || binary.length == 0 ? <p><b>Virheellinen binääriluku!</b></p> : <p><b>{binary} on desimaalilukuna {decimal}</b></p>}
             </div>
         </div>
     )
