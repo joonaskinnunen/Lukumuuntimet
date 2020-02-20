@@ -1,6 +1,7 @@
 import React from 'react';
 import BinToDecCon from './BinToDecCon'
 import DecToBinCon from './DecToBinCon'
+import DecToHexCon from './DecToHexCon'
 
 const Math = () => {
     return (
@@ -14,6 +15,7 @@ const Math = () => {
             </p>
             <BinToDecCon />
             <DecToBinCon />
+            <DecToHexCon />
 
         </div>
     )

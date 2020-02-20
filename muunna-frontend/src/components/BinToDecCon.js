@@ -46,7 +46,7 @@ const BinToDecCon = () => {
         <div>
             <div>
             <h2>
-            Binääri desimaali muunnin
+            Binääri-desimaaliluku muunnin
             </h2>
             <div>
                 <form>
