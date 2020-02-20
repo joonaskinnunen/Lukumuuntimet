@@ -1,5 +1,5 @@
 import React from 'react';
-import BinaryConverter from './BinaryConverter'
+import BinToDecCon from './BinToDecCon'
 
 const Math = () => {
     return (
@@ -11,7 +11,7 @@ const Math = () => {
                 Matemaattisilla muuntimilla voit muuttaa erilaisia matemaattisia
                 yksiköitä toiseen yksikköön.
             </p>
-            <BinaryConverter />
+            <BinToDecCon />
         </div>
     )
 }

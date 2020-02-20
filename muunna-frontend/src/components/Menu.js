@@ -1,5 +1,7 @@
 import React from 'react';
-import { Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap'
+import { Navbar, Nav, NavItem, Form, FormControl, Button} from 'react-bootstrap'
+import { LinkContainer } from "react-router-bootstrap";
+import { Link } from 'react-router-dom'
 
 const Menu = () => {
     return (
@@ -8,8 +10,10 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Etusivu</Nav.Link>
-            <Nav.Link href="#link">Matematiikka</Nav.Link>
+            <Nav.Link href="/">Etusivu</Nav.Link>
+            <LinkContainer to="/matematiikka">
+              <NavItem>Matematiikka</NavItem>
+            </LinkContainer>
             <Nav.Link href="#link">Raha</Nav.Link>
             <Nav.Link href="#link">Huvi</Nav.Link>
             <Nav.Link href="#link">Hyöty</Nav.Link>
@@ -20,6 +24,7 @@ const Menu = () => {
           </Form>
         </Navbar.Collapse>
       </Navbar>
+      
     )
 }
 
