@@ -1,5 +1,6 @@
 import React from 'react';
 import BinToDecCon from './BinToDecCon'
+import DecToBinCon from './DecToBinCon'
 
 const Math = () => {
     return (
@@ -12,6 +13,8 @@ const Math = () => {
                 yksiköitä toiseen yksikköön.
             </p>
             <BinToDecCon />
+            <DecToBinCon />
+
         </div>
     )
 }

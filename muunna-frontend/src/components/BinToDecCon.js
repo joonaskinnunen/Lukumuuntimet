@@ -7,7 +7,7 @@ const BinToDecCon = () => {
 
     useEffect(() => {
         handleChange(binary)
-        document.title = 'Binääri desimaaliluku muunnin'
+        document.title = 'Binääri-desimaaliluku muunnin'
     })
 
     const handleChange = (value) => {
