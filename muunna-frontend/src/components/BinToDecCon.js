@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Breadcrumb } from 'react-bootstrap'
 
 const BinToDecCon = () => {
     const [binary, setBinary] = useState('')
@@ -44,6 +45,15 @@ const BinToDecCon = () => {
 
     return (
         <div>
+            <Breadcrumb>
+                <Breadcrumb.Item href="http://localhost:3000">Alkuun</Breadcrumb.Item>
+                <Breadcrumb.Item href="#">
+                Matematiikka
+                </Breadcrumb.Item>
+                <Breadcrumb.Item active>
+                Binääri-desimaaliluku muunnin
+                </Breadcrumb.Item>
+            </Breadcrumb>
             <div>
             <h2>
             Binääri-desimaaliluku muunnin
