@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import { Breadcrumb } from 'react-bootstrap'
+import Notification from './Notification'
 
 const BinToDecCon = () => {
     const [binary, setBinary] = useState('')
     const [decimal, setDecimal] = useState('')
-    const [result, setResult] = useState('')
+    const [message, setMessage] = useState('')
+    const [errorMessage, setErrorMessage] = useState('')
 
     useEffect(() => {
         handleChange(binary)
@@ -16,17 +18,16 @@ const BinToDecCon = () => {
         if(validateBinary(value)) {
             setDecimal(convertBinToDec(value))
             if(value.length > 0) {
-                setResult(`${binary} on desimaalilukuna ${decimal}`)
+                setMessage(`${binary} on desimaalilukuna ${decimal}`)
+                setErrorMessage('')
             } else {
-                setResult('')
+                setMessage('')
+                setErrorMessage('')
             }
         } else {
-            setResult('Virheellinen binääriluku. Syötä ainoastaan numeroita 0 tai 1.')
+            setErrorMessage('Virheellinen binääriluku. Syötä ainoastaan numeroita 0 tai 1.')
+            setMessage('')
         }
-        console.log(binary)
-        console.log(decimal)
-        console.log(result)
-
     }
 
     const validateBinary = (bin) => {
@@ -65,8 +66,7 @@ const BinToDecCon = () => {
                         </input>
                     </p>
                 </form>
-                <p><b>{result}</b></p>
-            </div>
+                <Notification message={message} result={decimal} errorMessage={errorMessage} />            </div>
             </div>
         </div>
     )

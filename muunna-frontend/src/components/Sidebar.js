@@ -14,6 +14,9 @@ const Sidebar = () => {
             <ListGroup.Item>
                 <Link to='/matematiikka/desimaali-heksadesimaali-muunnin'>Desimaaliluku - heksadesimaalilukumuunnin</Link>
             </ListGroup.Item>
+            <ListGroup.Item>
+                <Link to='/matematiikka/desimaali-oktaaliluku-muunnin'>Desimaaliluku - oktaalilukumuunnin</Link>
+            </ListGroup.Item>
         </ListGroup>
     )
 }

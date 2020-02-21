@@ -1,9 +1,12 @@
 import React, {useState, useEffect} from 'react'
+import { Alert } from 'react-bootstrap'
+import Notification from './Notification'
 
 const DecToHexCon = () => {
     const [decimal, setDecimal] = useState('')
     const [hex, setHex] = useState('')
-    const [result, setResult] = useState('')
+    const [message, setMessage] = useState('')
+    const [errorMessage, setErrorMessage] = useState('')
 
     useEffect(() => {
         handleChange(decimal)
@@ -12,17 +15,20 @@ const DecToHexCon = () => {
 
     const handleChange = (value) => {
         setDecimal(value)
-        setHex(convertDectoHex(decimal))
+        setHex(convertDectoHex(decimal).toUpperCase())
         if (isNaN(value)) {
-            setResult('Syötetty luku ei ole numero')
+            setErrorMessage('Syötetty luku ei ole numero')
+            setMessage('')
         } else if (value.length !== 0) {
-            setResult(`${decimal} on heksadesimaalilukuna ${hex.toUpperCase()}`)
+            setErrorMessage('')
+            setMessage(`${decimal} on heksalukuna ${hex}`)
         } else {
-            setResult('')
+            setMessage('')
+            setErrorMessage('')
         }
         console.log(hex)
         console.log(decimal)
-        console.log(result)
+        console.log(message)
     }
 
     const convertDectoHex = (dec) => {
@@ -32,6 +38,30 @@ const DecToHexCon = () => {
         return parseInt(dec, 10).toString(16);
     }
 
+    const ResultDiv = () => {
+        return (
+            <Alert variant="success">
+                <Alert.Heading>{hex}</Alert.Heading>
+                <p>
+                <b>{message}</b>
+                </p>
+            </Alert>
+        )
+        
+    }
+
+    const ErrorDiv = () => {
+        return (
+            <Alert variant="danger">
+                <Alert.Heading>Virhe</Alert.Heading>
+                <p>
+                <b>{errorMessage}</b>
+                </p>
+            </Alert>
+        )
+        
+    }
+
     return (
         <div>
             <div>
@@ -39,13 +69,17 @@ const DecToHexCon = () => {
             Desimaali-heksadesimaali muunnin
             </h2>
             <div>
+                <p>
+                    Voit muuttaa tällä muuntimella numeron heksaluvuksi. Syötä alle muunnettava luku, niin näet muunnetun heksadesimaaliluvun.
+                </p>
                 <form>
                     <p>
                         Syötä luku: <input value={decimal} onChange={({target}) => handleChange(target.value)}>
                         </input>
                     </p>
                 </form>
-                <p><b>{result}</b></p>
+                <Notification message={message} result={hex} errorMessage={errorMessage} />
+                <resultDiv />
             </div>
             </div>
         </div>
