@@ -1,14 +1,15 @@
 import React from 'react'
-import Math from './components/Math'
+import Math from './components/Math/Math'
 import './App.css'
 import Menu from './components/Menu'
 import Sidebar from './components/Sidebar'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
-import BinToDecCon from './components/BinToDecCon'
-import DecToBinCon from './components/DecToBinCon'
-import DecToHexCon from './components/DecToHexCon'
-import DecToOctCon from './components/DecToOctCon'
+import BinToDecCon from './components/Math/BinToDecCon'
+import DecToBinCon from './components/Math/DecToBinCon'
+import DecToHexCon from './components/Math/DecToHexCon'
+import DecToOctCon from './components/Math/DecToOctCon'
+import CharCount from './components/Useful/CharCount'
 import Home from './components/Home'
 import Footer from './components/Footer'
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/matematiikka/desimaali-binaari-muunnin" render={() => <DecToBinCon />} />
             <Route path="/matematiikka/desimaali-heksadesimaali-muunnin/" render={() => <DecToHexCon />} />
             <Route path="/matematiikka/desimaali-oktaaliluku-muunnin/" render={() => <DecToOctCon />} />
+            <Route path="/hyoty/merkki-ja-sanalaskuri/" render={() => <CharCount />} />
           </Col>
           <Col>
             <Sidebar />

@@ -1,42 +1,42 @@
 import React, {useState, useEffect} from 'react'
-import Notification from './Notification'
+import Notification from '../Notification'
 
-const DecToOctCon = () => {
+const DecToBinCon = () => {
     const [decimal, setDecimal] = useState('')
-    const [oct, setOct] = useState('')
+    const [binary, setBinary] = useState('')
     const [message, setMessage] = useState('')
     const [errorMessage, setErrorMessage] = useState('')
 
     useEffect(() => {
         handleChange(decimal)
-        document.title = 'Desimaali-oktaaliluku muunnin'
+        document.title = 'Desimaali-binääriluku muunnin'
     })
 
     const handleChange = (value) => {
         setDecimal(value)
-        setOct(convertDectoOct(decimal))
+        setBinary(convertDectoBin(decimal))
         if (isNaN(value)) {
             setErrorMessage('Syötetty luku ei ole numero')
         } else if (value.length !== 0) {
-            setMessage(`${decimal} on oktaalilukuna ${oct}`)
+            setMessage(`${decimal} on binäärilukuna ${binary}`)
         } else {
             setMessage('')
             setErrorMessage('')
         }
     }
 
-    const convertDectoOct = (oct) => {
-        if (oct < 0) {
-            oct = 0xFFFFFFFF + oct + 1
+    const convertDectoBin = (dec) => {
+        if (dec < 0) {
+            dec = 0xFFFFFFFF + dec + 1
         }
-        return parseInt(oct, 10).toString(8)
+        return parseInt(dec, 10).toString(2);
     }
 
     return (
         <div>
             <div>
             <h2>
-            Desimaali-oktaaliluku muunnin
+            Desimaali-binääriluku muunnin
             </h2>
             <div>
                 <form>
@@ -45,10 +45,10 @@ const DecToOctCon = () => {
                         </input>
                     </p>
                 </form>
-                <Notification message={message} result={oct} errorMessage={errorMessage} />
+                <Notification message={message} result={binary} errorMessage={errorMessage} />
             </div>
             </div>
         </div>
     )
 }
-export default DecToOctCon
+export default DecToBinCon

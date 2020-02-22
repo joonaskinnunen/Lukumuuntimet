@@ -1,11 +1,16 @@
 import React from 'react'
 import { Breadcrumb } from 'react-bootstrap'
+import { LinkContainer } from "react-router-bootstrap"
 
 const Math = () => {
     return (
         <div>
             <Breadcrumb>
-                <Breadcrumb.Item href="#">Alkuun</Breadcrumb.Item>
+                <LinkContainer to="../">
+                <Breadcrumb.Item>
+                Alkuun
+                </Breadcrumb.Item>
+                </LinkContainer>
                 <Breadcrumb.Item active>
                 Matematiikka
                 </Breadcrumb.Item>

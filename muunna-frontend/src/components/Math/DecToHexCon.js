@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Alert } from 'react-bootstrap'
-import Notification from './Notification'
+import Notification from '../Notification'
 
 const DecToHexCon = () => {
     const [decimal, setDecimal] = useState('')

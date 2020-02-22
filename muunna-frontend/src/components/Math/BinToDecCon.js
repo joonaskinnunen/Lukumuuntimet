@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Breadcrumb } from 'react-bootstrap'
-import Notification from './Notification'
+import Notification from '../Notification'
+import { LinkContainer } from "react-router-bootstrap"
 
 const BinToDecCon = () => {
     const [binary, setBinary] = useState('')
@@ -47,10 +48,16 @@ const BinToDecCon = () => {
     return (
         <div>
             <Breadcrumb>
-                <Breadcrumb.Item href="http://localhost:3000">Alkuun</Breadcrumb.Item>
-                <Breadcrumb.Item href="#">
+                <LinkContainer to="../">
+                <Breadcrumb.Item>
+                Alkuun
+                </Breadcrumb.Item>
+                </LinkContainer>
+                <LinkContainer to="./">
+                <Breadcrumb.Item>
                 Matematiikka
                 </Breadcrumb.Item>
+                </LinkContainer>
                 <Breadcrumb.Item active>
                 Binääri-desimaaliluku muunnin
                 </Breadcrumb.Item>
