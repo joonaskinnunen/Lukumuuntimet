@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import { Alert } from 'react-bootstrap'
 import Notification from '../Notification'
+import { Breadcrumb } from 'react-bootstrap'
+import { LinkContainer } from "react-router-bootstrap"
 
 const DecToHexCon = () => {
     const [decimal, setDecimal] = useState('')
@@ -38,35 +39,26 @@ const DecToHexCon = () => {
         return parseInt(dec, 10).toString(16);
     }
 
-    const ResultDiv = () => {
-        return (
-            <Alert variant="success">
-                <Alert.Heading>{hex}</Alert.Heading>
-                <p>
-                <b>{message}</b>
-                </p>
-            </Alert>
-        )
-        
-    }
-
-    const ErrorDiv = () => {
-        return (
-            <Alert variant="danger">
-                <Alert.Heading>Virhe</Alert.Heading>
-                <p>
-                <b>{errorMessage}</b>
-                </p>
-            </Alert>
-        )
-        
-    }
-
     return (
         <div>
+            <Breadcrumb>
+                <LinkContainer to="../">
+                <Breadcrumb.Item>
+                Alkuun
+                </Breadcrumb.Item>
+                </LinkContainer>
+                <LinkContainer to="./">
+                <Breadcrumb.Item>
+                Matematiikka
+                </Breadcrumb.Item>
+                </LinkContainer>
+                <Breadcrumb.Item active>
+                Desimaali-heksadesimaalimuunnin
+                </Breadcrumb.Item>
+            </Breadcrumb>
             <div>
             <h2>
-            Desimaali-heksadesimaali muunnin
+            Desimaali-heksadesimaalimuunnin
             </h2>
             <div>
                 <p>
@@ -79,7 +71,6 @@ const DecToHexCon = () => {
                     </p>
                 </form>
                 <Notification message={message} result={hex} errorMessage={errorMessage} />
-                <resultDiv />
             </div>
             </div>
         </div>

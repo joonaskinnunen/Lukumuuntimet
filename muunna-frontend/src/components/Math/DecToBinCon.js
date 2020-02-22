@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Notification from '../Notification'
+import { Breadcrumb } from 'react-bootstrap'
+import { LinkContainer } from "react-router-bootstrap"
 
 const DecToBinCon = () => {
     const [decimal, setDecimal] = useState('')
@@ -9,7 +11,7 @@ const DecToBinCon = () => {
 
     useEffect(() => {
         handleChange(decimal)
-        document.title = 'Desimaali-binääriluku muunnin'
+        document.title = 'Desimaali-binäärilukumuunnin'
     })
 
     const handleChange = (value) => {
@@ -34,9 +36,24 @@ const DecToBinCon = () => {
 
     return (
         <div>
+            <Breadcrumb>
+                <LinkContainer to="../">
+                <Breadcrumb.Item>
+                Alkuun
+                </Breadcrumb.Item>
+                </LinkContainer>
+                <LinkContainer to="./">
+                <Breadcrumb.Item>
+                Matematiikka
+                </Breadcrumb.Item>
+                </LinkContainer>
+                <Breadcrumb.Item active>
+                Desimaaliluku-binäärilukumuunnin
+                </Breadcrumb.Item>
+            </Breadcrumb>
             <div>
             <h2>
-            Desimaali-binääriluku muunnin
+            Desimaali-binäärilukumuunnin
             </h2>
             <div>
                 <form>

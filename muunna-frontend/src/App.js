@@ -9,6 +9,7 @@ import BinToDecCon from './components/Math/BinToDecCon'
 import DecToBinCon from './components/Math/DecToBinCon'
 import DecToHexCon from './components/Math/DecToHexCon'
 import DecToOctCon from './components/Math/DecToOctCon'
+import Useful from './components/Useful/Useful'
 import CharCount from './components/Useful/CharCount'
 import Home from './components/Home'
 import Footer from './components/Footer'
@@ -33,6 +34,7 @@ function App() {
             <Route path="/matematiikka/desimaali-binaari-muunnin" render={() => <DecToBinCon />} />
             <Route path="/matematiikka/desimaali-heksadesimaali-muunnin/" render={() => <DecToHexCon />} />
             <Route path="/matematiikka/desimaali-oktaaliluku-muunnin/" render={() => <DecToOctCon />} />
+            <Route exact path="/hyoty" render={() => <Useful />} />
             <Route path="/hyoty/merkki-ja-sanalaskuri/" render={() => <CharCount />} />
           </Col>
           <Col>

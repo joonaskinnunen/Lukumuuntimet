@@ -1,8 +1,12 @@
 import React from 'react'
-import { ListGroup, Nav } from 'react-bootstrap'
+import { Nav } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 
 const Home = () => {
+
+    const iconsStyle = {
+        color: 'grey'
+    }
     return (
         <div>
             <h2>
@@ -13,10 +17,10 @@ const Home = () => {
             </p>
             <Nav fill variant="tabs" className="flex-column">
                 <LinkContainer to="/matematiikka/">
-                    <Nav.Link>Matematiikka</Nav.Link>
+                    <Nav.Link><i class="fas fa-square-root-alt" style={iconsStyle}></i> Matematiikka</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/hyoty/">
-                    <Nav.Link>Hyöty</Nav.Link>
+                    <Nav.Link><i class="fas fa-star-of-life" style={iconsStyle}></i> Hyöty</Nav.Link>
                 </LinkContainer>
             </Nav>
         </div>
