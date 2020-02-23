@@ -17,10 +17,10 @@ const Home = () => {
             </p>
             <Nav fill variant="tabs" className="flex-column">
                 <LinkContainer to="/matematiikka/">
-                    <Nav.Link><i class="fas fa-square-root-alt" style={iconsStyle}></i> Matematiikka</Nav.Link>
+                    <Nav.Link><i className="fas fa-square-root-alt" style={iconsStyle}></i> Matematiikka</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/hyoty/">
-                    <Nav.Link><i class="fas fa-star-of-life" style={iconsStyle}></i> Hyöty</Nav.Link>
+                    <Nav.Link><i className="fas fa-star-of-life" style={iconsStyle}></i> Hyöty</Nav.Link>
                 </LinkContainer>
             </Nav>
         </div>
