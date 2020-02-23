@@ -4,25 +4,23 @@ import { LinkContainer } from "react-router-bootstrap"
 
 const CharCount = () => {
     const [string, setString] = useState('')
-    const [results, setResults] = useState({length: {chars: 0, charsWithoutSpaces: 0}, words: 0})
+    const [results, setResults] = useState({length: {chars: 0, charsWithoutSpaces: 0}, words: 0, sentences: 0, newLines: 0})
 
     const handleChange = (value) => {
         setString(value)
-        console.log(countChar(value))
-        const returnedCharrs = countChar(value)
-        setResults({...results, words: countWords(value), length: returnedCharrs})
-        console.log(results)
+        setResults({...results, words: countWords(value), length: countChar(value), sentences: countSentences(value), newLines: countNewLines(value)})
+        if(value.length === 0) {
+            setResults({length: {chars: 0, charsWithoutSpaces: 0}, words: 0, sentences: 0, newLines: 0})
+        }
     }
 
     const countChar = (value) => {
         let spaces = 0
         for(let i = 0; i < value.length; i++) {
-            if(value.charAt(i) === ' ') {
+            if(value.charAt(i).match(/\s+$/)) {
                 spaces++
-                console.log(spaces)
             }
         }
-        console.log(results)
         return {
             chars: value.length,
             charsWithoutSpaces: value.length - spaces
@@ -30,18 +28,36 @@ const CharCount = () => {
     }
 
     const countWords = (value) => {
-        let words = 0
-        let i = 1
-        while(i < value.length) {
-            if(value.charAt(i) === ' ' || value.charAt(i) === '.') {
-                words++;
-                while(value.charAt(i + 1) === ' ' || value.charAt(i + 1) === '.') {
-                    i++
-                }
-            }
-            i++
+        let str = value.replace(/(^\s*)|(\s*$)/gi,'')
+        str = str.replace(/[\r\n\x0B\x0C\u0085\u2028\u2029]+/g, ' ')
+        str = str.replace(/[ ]{2,}/gi,' ')
+        str = str.replace(/\n /,"\n")
+        return str.split(' ').length
+    }
+
+    const countSentences = (value) => {
+        let numOfSentences = value.replace(/(\.+|:|!|\?)("*|'*|\)*|}*|]*)(\s|\n|\r|\r\n)/gm, "$1$2|").split("|").length
+        if(value.charAt(value.length - 1) === ' ' && value.charAt(value.length - 2) === '.') {
+            numOfSentences--
         }
-        return words;
+        return numOfSentences
+    }
+
+    const countNewLines = (value) => {
+        let newLines = value.split(/\r\n|\r|\n/).length
+        for(let i = value.length - 1; i > 0; i--) {
+            if(value.charAt(i).match(/\r\n|\r|\n/) && value.charAt(i-1).match(/\r\n|\r|\n/)) {
+                newLines--
+            }
+        }
+        if(value.charAt(value.length-1).match(/\r\n|\r|\n/)) {
+            newLines--
+        }
+        return newLines
+    }
+
+    const pStyle = {
+        marginTop: 20
     }
 
     return (
@@ -67,8 +83,26 @@ const CharCount = () => {
             <p>
                 Laskuri laskee syötetyn tekstin merkkien ja sanojen määrän.
             </p>
-            <p>Teksti sisältää <b>{results.length.chars}</b> merkkiä (ilman välilyöntejä {results.length.charsWithoutSpaces}) ja <b>{results.words}</b> sanaa</p>
-            <textarea class="form-control" rows="10" value={string} onChange={({target}) => handleChange(target.value)}></textarea>
+    <p><b>Teksti sisältää {results.length.charsWithoutSpaces} merkkiä ja <b>{results.words}</b> sanaa.</b></p>
+            <textarea className="form-control" rows="10" value={string} onChange={({target}) => handleChange(target.value)}></textarea>
+            <p style={pStyle}>Teksti sisältää:</p>
+            <ul>
+                <li>
+                    <b>{results.length.charsWithoutSpaces}</b> merkkiä
+                </li>
+                <li>
+                    <b>{results.length.chars}</b> merkkiä välilyönnit ja rivinvaihdot mukaan luettuna
+                </li>
+                <li>
+                    <b>{results.words}</b> sanaa
+                </li>
+                <li>
+                <b>{results.sentences}</b> lausetta
+                </li>
+                <li>
+                <b>{results.newLines}</b> kappaletta
+                </li>
+            </ul>
         </div>
     )
 }
