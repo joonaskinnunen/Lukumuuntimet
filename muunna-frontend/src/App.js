@@ -12,6 +12,7 @@ import DecToOctCon from './components/Math/DecToOctCon'
 import Useful from './components/Useful/Useful'
 import CharCount from './components/Useful/CharCount'
 import VatCount from './components/Finance/VatCount'
+import BMICalc from './components/Health/BMICalc'
 import Home from './components/Home'
 import Footer from './components/Footer'
 import Finance from './components/Finance/Finance'
@@ -38,8 +39,9 @@ function App() {
             <Route path="/matematiikka/desimaali-oktaaliluku-muunnin/" render={() => <DecToOctCon />} />
             <Route exact path="/hyoty" render={() => <Useful />} />
             <Route path="/hyoty/merkki-ja-sanalaskuri/" render={() => <CharCount />} />
-            <Route path="/raha/alv-laskuri/" render={() => <VatCount />} />
             <Route exact path="/raha" render={() => <Finance />} />
+            <Route path="/raha/alv-laskuri/" render={() => <VatCount />} />
+            <Route exact path="/terveys/painoindeksilaskuri/" render={() => <BMICalc />} />
           </Col>
           <Col>
             <Sidebar />
