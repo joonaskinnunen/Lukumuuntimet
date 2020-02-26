@@ -22,6 +22,9 @@ const Home = () => {
                 <LinkContainer to="/hyoty/">
                     <Nav.Link><i className="fas fa-star-of-life" style={iconsStyle}></i> Hyöty</Nav.Link>
                 </LinkContainer>
+                <LinkContainer to="/raha/">
+                    <Nav.Link><i className="fas fa-euro-sign" style={iconsStyle}></i> Raha ja talous</Nav.Link>
+                </LinkContainer>
             </Nav>
         </div>
     )

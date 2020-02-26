@@ -95,8 +95,15 @@ const CharCount = () => {
             <p>
                 Laskuri laskee syötetyn tekstin merkkien ja sanojen määrän.
             </p>
-    <p><b>Teksti sisältää {results.length.charsWithoutSpaces} merkkiä ja <b>{results.words.numOfWords}</b> sanaa.</b></p>
-            <textarea className="form-control" rows="10" value={string} onChange={({target}) => handleChange(target.value)}></textarea>
+            <p><b>Teksti sisältää {results.length.charsWithoutSpaces} merkkiä ja <b>{results.words.numOfWords}</b> sanaa.</b></p>
+            <div className="input-group">
+                <div className="input-group-prepend">
+                    <span className="input-group-text" id="basic-addon">
+                    <i className="fas fa-pencil-alt prefix"></i>
+                    </span>
+                </div>
+                <textarea className="form-control" rows="10" value={string} onChange={({target}) => handleChange(target.value)}></textarea>
+            </div>
             <p style={pStyle}>Teksti sisältää:</p>
             <ul>
                 <li>
