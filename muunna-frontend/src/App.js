@@ -16,6 +16,7 @@ import BMICalc from './components/Health/BMICalc'
 import Home from './components/Home'
 import Footer from './components/Footer'
 import Finance from './components/Finance/Finance'
+import Health from './components/Health/Health'
 
 function App() {
     const containerStyle = {
@@ -41,7 +42,8 @@ function App() {
             <Route path="/hyoty/merkki-ja-sanalaskuri/" render={() => <CharCount />} />
             <Route exact path="/raha" render={() => <Finance />} />
             <Route path="/raha/alv-laskuri/" render={() => <VatCount />} />
-            <Route exact path="/terveys/painoindeksilaskuri/" render={() => <BMICalc />} />
+            <Route exact path="/terveys" render={() => <Health />} />
+            <Route path="/terveys/painoindeksilaskuri/" render={() => <BMICalc />} />
           </Col>
           <Col>
             <Sidebar />
