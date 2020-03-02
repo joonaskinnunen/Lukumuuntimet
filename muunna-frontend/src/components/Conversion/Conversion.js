@@ -30,6 +30,18 @@ const Conversion = () => {
                 <LinkContainer to="/yksikkomuuntimet/pituusmuunnin">
                     <Nav.Link>Pituusmuunnin / etäisyysmuunnin</Nav.Link>
                 </LinkContainer>
+                <LinkContainer to="/yksikkomuuntimet/desimaali-binaari-muunnin">
+                    <Nav.Link>Desimaali-binäärilukumuunnin</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/yksikkomuuntimet/binaari-desimaali-muunnin">
+                    <Nav.Link>Binääri-desimaaliluku muunnin</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/yksikkomuuntimet/desimaali-heksadesimaali-muunnin">
+                    <Nav.Link>Desimaali-heksadesimaalimuunnin</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/yksikkomuuntimet/desimaali-oktaaliluku-muunnin">
+                    <Nav.Link>Desimaali-oktaalilukumuunnin</Nav.Link>
+                </LinkContainer>
             </Nav>
         </div>
     )

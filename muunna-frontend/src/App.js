@@ -5,10 +5,10 @@ import Menu from './components/Menu'
 import Sidebar from './components/Sidebar'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
-import BinToDecCon from './components/Math/BinToDecCon'
-import DecToBinCon from './components/Math/DecToBinCon'
-import DecToHexCon from './components/Math/DecToHexCon'
-import DecToOctCon from './components/Math/DecToOctCon'
+import BinToDecCon from './components/Conversion/BinToDecCon'
+import DecToBinCon from './components/Conversion/DecToBinCon'
+import DecToHexCon from './components/Conversion/DecToHexCon'
+import DecToOctCon from './components/Conversion/DecToOctCon'
 import Useful from './components/Useful/Useful'
 import CharCount from './components/Useful/CharCount'
 import VatCount from './components/Finance/VatCount'
@@ -36,10 +36,10 @@ function App() {
           <Col xs={8}>
             <Route exact path="/" render={() => <Home />} />
             <Route exact path="/matematiikka" render={() => <Math />} />
-            <Route path="/matematiikka/binaari-desimaali-muunnin/" render={() => <BinToDecCon />} />
-            <Route path="/matematiikka/desimaali-binaari-muunnin" render={() => <DecToBinCon />} />
-            <Route path="/matematiikka/desimaali-heksadesimaali-muunnin/" render={() => <DecToHexCon />} />
-            <Route path="/matematiikka/desimaali-oktaaliluku-muunnin/" render={() => <DecToOctCon />} />
+            <Route path="/yksikkomuuntimet/binaari-desimaali-muunnin" render={() => <BinToDecCon />} />
+            <Route path="/yksikkomuuntimet/desimaali-binaari-muunnin" render={() => <DecToBinCon />} />
+            <Route path="/yksikkomuuntimet/desimaali-heksadesimaali-muunnin" render={() => <DecToHexCon />} />
+            <Route path="/yksikkomuuntimet/desimaali-oktaaliluku-muunnin" render={() => <DecToOctCon />} />
             <Route exact path="/hyoty" render={() => <Useful />} />
             <Route path="/hyoty/merkki-ja-sanalaskuri/" render={() => <CharCount />} />
             <Route exact path="/raha" render={() => <Finance />} />
