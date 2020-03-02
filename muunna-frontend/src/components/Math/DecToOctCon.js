@@ -11,7 +11,7 @@ const DecToOctCon = () => {
 
     useEffect(() => {
         handleChange(decimal)
-        document.title = 'Desimaali-oktaalilukumuunnin'
+        document.title = 'Desimaali-oktaalilukumuunnin - Laske & Muunna'
     })
 
     const handleChange = (value) => {

@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Breadcrumb, Nav } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 
 const Finance = () => {
+
+    useEffect(() => {
+        document.title = 'Terveys - Laske & Muunna'
+    })
+
     return (
         <div>
             <Breadcrumb>

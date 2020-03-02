@@ -1,8 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Breadcrumb } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 
 const CharCount = () => {
+
+    useEffect(() => {
+        document.title = 'Merkki- ja sanalaskuri - Laske & Muunna'
+    })
+
     const [string, setString] = useState('')
     const [results, setResults] = useState({length: {chars: 0, charsWithoutSpaces: 0}, words: {popularWords: [], numOfWords: 0, avgLength: 0}, sentences: 0, newLines: 0})
 

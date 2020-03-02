@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Breadcrumb, Nav } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 
 const Math = () => {
+
+    useEffect(() => {
+        document.title = 'Matematiikka - Laske & Muunna'
+    })
+
     return (
         <div>
             <Breadcrumb>

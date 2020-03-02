@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Breadcrumb, InputGroup, FormControl } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 
@@ -6,6 +6,10 @@ const VatCount = () => {
     const [vatPercent, setVatPercent] = useState(24)
     const [valueWithoutTax, setValueWithoutTax] = useState(100)
     const [valueWithTax, setValueWithTax] = useState(124)
+
+    useEffect(() => {
+        document.title = 'ALV-laskuri - Laske & Muunna'
+    })
 
     const handleValueChange = (value) => {
         setValueWithoutTax(value)

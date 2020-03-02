@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React, {useEffect} from 'react'
 import { Breadcrumb, Nav } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 
-const Useful = () => {
+const Conversion = () => {
 
     useEffect(() => {
-        document.title = 'Hyöty - Laske & Muunna'
+        document.title = 'Yksikkömuuntimet - Laske & Muunna'
     })
 
     return (
@@ -17,22 +17,22 @@ const Useful = () => {
                 </Breadcrumb.Item>
                 </LinkContainer>
                 <Breadcrumb.Item active>
-                Hyöty
+                Yksikkömuuntimet
                 </Breadcrumb.Item>
             </Breadcrumb>
             <h2>
-                Hyöty
+            Yksikkömuuntimet
             </h2>
             <p>
-                Erilaisia hyödyllisiä laskimia arkisiin ja vähemmän arkisiin ongelmiin.
+                Erilaisia hyödyllisiä yksikkömuuntimia arkipäivisiin ja vähemmän arkipäivisiin tarpeisiin.
             </p>
             <Nav fill variant="tabs" className="flex-column">
-                <LinkContainer to="/hyoty/merkki-ja-sanalaskuri/">
-                    <Nav.Link>Merkki- ja sanalaskuri</Nav.Link>
+                <LinkContainer to="/yksikkomuuntimet/pituusmuunnin">
+                    <Nav.Link>Pituusmuunnin / etäisyysmuunnin</Nav.Link>
                 </LinkContainer>
             </Nav>
         </div>
     )
 }
 
-export default Useful
+export default Conversion

@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect} from 'react'
 import { Breadcrumb, InputGroup, FormControl } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 
 const BMICalc = () => {
     const [values, setValues] = useState({ weight: 70, height: 180, bmi: 20 })
+
+    useEffect(() => {
+        document.title = 'Painoindeksilaskuri - Laske & Muunna'
+    })
 
     const handleHeightChange = (value) => {
         console.log(values)

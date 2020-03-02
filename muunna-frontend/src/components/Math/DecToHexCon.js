@@ -11,7 +11,7 @@ const DecToHexCon = () => {
 
     useEffect(() => {
         handleChange(decimal)
-        document.title = 'Desimaali-heksadesimaali muunnin'
+        document.title = 'Desimaali-heksadesimaali muunnin - Laske & Muunna'
     })
 
     const handleChange = (value) => {

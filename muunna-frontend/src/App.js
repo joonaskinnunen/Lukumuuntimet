@@ -17,6 +17,8 @@ import Home from './components/Home'
 import Footer from './components/Footer'
 import Finance from './components/Finance/Finance'
 import Health from './components/Health/Health'
+import Conversion from './components/Conversion/Conversion'
+import LengthCon from './components/Conversion/LengthCon'
 
 function App() {
     const containerStyle = {
@@ -44,6 +46,8 @@ function App() {
             <Route path="/raha/alv-laskuri/" render={() => <VatCount />} />
             <Route exact path="/terveys" render={() => <Health />} />
             <Route path="/terveys/painoindeksilaskuri/" render={() => <BMICalc />} />
+            <Route exact path="/yksikkomuuntimet" render={() => <Conversion />} />
+            <Route path="/yksikkomuuntimet/pituusmuunnin/" render={() => <LengthCon />} />
           </Col>
           <Col>
             <Sidebar />

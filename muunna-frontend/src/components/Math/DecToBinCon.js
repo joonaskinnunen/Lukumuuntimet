@@ -11,7 +11,7 @@ const DecToBinCon = () => {
 
     useEffect(() => {
         handleChange(decimal)
-        document.title = 'Desimaali-binäärilukumuunnin'
+        document.title = 'Desimaali-binäärilukumuunnin - Laske & Muunna'
     })
 
     const handleChange = (value) => {
