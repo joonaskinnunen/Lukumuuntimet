@@ -29,6 +29,9 @@ const Math = () => {
                 <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </p>
             <Nav fill variant="tabs" className="flex-column">
+                <LinkContainer to="/matematiikka/prosenttilaskuri/">
+                    <Nav.Link>Prosenttilaskuri</Nav.Link>
+                </LinkContainer>
             </Nav>
         </div>
     )

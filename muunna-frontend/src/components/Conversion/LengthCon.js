@@ -10,10 +10,12 @@ const LengthCon = () => {
     })
 
     const handleCmChange = (value) => {
+        value = value.replace(/,/g, '.')
         setValues({...values, cm: value, inch: value * 0.393700787})
     }
 
     const handleInchChange = (value) => {
+        value = value.replace(/,/g, '.')
         setValues({...values, inch: value, cm: value * 2.54})
     }
 

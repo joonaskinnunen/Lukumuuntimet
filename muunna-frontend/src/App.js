@@ -1,5 +1,4 @@
 import React from 'react'
-import Math from './components/Math/Math'
 import './App.css'
 import Menu from './components/Menu'
 import Sidebar from './components/Sidebar'
@@ -19,6 +18,8 @@ import Finance from './components/Finance/Finance'
 import Health from './components/Health/Health'
 import Conversion from './components/Conversion/Conversion'
 import LengthCon from './components/Conversion/LengthCon'
+import Math from './components/Math/Math'
+import PercentCalc from './components/Math/PercentCalc'
 
 function App() {
     const containerStyle = {
@@ -36,6 +37,7 @@ function App() {
           <Col xs={8}>
             <Route exact path="/" render={() => <Home />} />
             <Route exact path="/matematiikka" render={() => <Math />} />
+            <Route path="/matematiikka/prosenttilaskuri" render={() => <PercentCalc />} />
             <Route path="/yksikkomuuntimet/binaari-desimaali-muunnin" render={() => <BinToDecCon />} />
             <Route path="/yksikkomuuntimet/desimaali-binaari-muunnin" render={() => <DecToBinCon />} />
             <Route path="/yksikkomuuntimet/desimaali-heksadesimaali-muunnin" render={() => <DecToHexCon />} />
