@@ -18,7 +18,7 @@ const PercentCalc = () => {
             setErrorMessage('Syötetty luku ei ole numero')
         } else if (value.length !== 0) {
             setValues({...values, percent: value})
-            values.percent.num > 0 ? setMessage(`${value}% luvusta ${values.num} on ${values.num * value / 100}`) : setMessage("Syötä molemmat luvut")
+            values.num.length > 0 ? setMessage(`${value}% luvusta ${values.num} on ${values.num * value / 100}`) : setMessage("Syötä molemmat luvut")
         } else {
             setMessage('')
             setErrorMessage('')
