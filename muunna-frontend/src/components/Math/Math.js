@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, {useEffect} from 'react'
 import { Breadcrumb, Nav } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 
@@ -7,6 +7,11 @@ const Math = () => {
     useEffect(() => {
         document.title = 'Matematiikka - Laske & Muunna'
     })
+
+    const iconsStyle = {
+        color: 'grey',
+        marginRight: '5px'
+    }
 
     return (
         <div>
@@ -24,13 +29,13 @@ const Math = () => {
                 Matemaattiset muuntimet
             </h2>
             <p>
+                Matematiikkaan liittyvät laskimet ja muuntimet.
                 Matemaattisilla muuntimilla voit muuttaa erilaisia matemaattisia
                 yksiköitä toiseen yksikköön.
-                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
             </p>
             <Nav fill variant="tabs" className="flex-column">
                 <LinkContainer to="/matematiikka/prosenttilaskuri">
-                    <Nav.Link>Prosenttilaskuri</Nav.Link>
+                    <Nav.Link><i className="fas fa-percent" style={iconsStyle}></i>Prosenttilaskuri</Nav.Link>
                 </LinkContainer>
             </Nav>
         </div>
