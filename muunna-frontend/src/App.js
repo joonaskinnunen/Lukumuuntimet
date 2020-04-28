@@ -34,7 +34,7 @@ function App() {
           </Col>
         </Row>
         <Row>
-          <Col xs={8}>
+          <Col>
             <Route exact path="/" render={() => <Home />} />
             <Route exact path="/matematiikka" render={() => <Math />} />
             <Route path="/matematiikka/prosenttilaskuri" render={() => <PercentCalc />} />
