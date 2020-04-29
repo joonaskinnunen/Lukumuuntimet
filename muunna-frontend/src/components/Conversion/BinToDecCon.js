@@ -7,7 +7,7 @@ import binaarijarjestelma from '../../binaarijarjestelma.png'
 import binaarilukutaulukko from '../../binaarilukutaulukko.png'
 
 const BinToDecCon = () => {
-    const [binary, setBinary] = useState('')
+    const [binary, setBinary] = useState('1010')
     const [decimal, setDecimal] = useState('')
     const [message, setMessage] = useState('')
     const [errorMessage, setErrorMessage] = useState('')
@@ -69,22 +69,22 @@ const BinToDecCon = () => {
             <h2>
             Binääri-desimaaliluku muunnin
             </h2>
-            <p>Tällä muuntimella voit muuntaa binääriluvun niin sanotuksi normaaliksi luvuksi.</p>
+            <p>Tällä muuntimella voit muuntaa binääriluvun niin sanotuksi normaaliksi luvuksi eli desimaaliluvuksi.</p>
             <div>
                 <form>
                     <p>
-                        Syötä binääriluku: <input value={binary} onChange={({target}) => handleChange(target.value)}>
+                        <b>Syötä binääriluku:</b> <input value={binary} onChange={({target}) => handleChange(target.value)}>
                         </input>
                     </p>
                 </form>
                 <Notification message={message} result={decimal} errorMessage={errorMessage} />            </div>
             </div>
             <hr />
-            <h3>Desimaalijärjestelmä</h3>
+            <h4>Desimaalijärjestelmä</h4>
             <p>Normaalisti käytämme arkielämässä normaalia 10-numeroista lukujärjestelmää (luvut 0-9), eli desimaalijärjestelmää.<br /> Numeron paikka luvussa on merkitsevä ja kullakin numerolla on erilainen painoarvo sen mukaan, mikä on numeron sijainti
             luvussa. Numeroiden painoarvot kasvavat oikealta vasemmalle: 1, 10, 100, 1000, 10000... <br />10 numerojärjestelmässä kantaluku on 10 ja numeroiden painoarvot saadaan kantaluvun potensseista: <var>1=10<sup>0</sup>, 10=10<sup>1</sup>, 100=10<sup>2</sup>, 1 000=10<sup>3</sup>, 10 000=10<sup>4</sup></var>
             <img src={desimaalijarjestelma} alt='Desimaaliluku' style={{maxWidth: '100%'}}/>
-            <h3>Binäärijärjestelmä</h3>
+            <h4>Binäärijärjestelmä</h4>
             Binäärijärjestelmä on teknisesti yksinkertaisin lukujärjestelmä. Binäärijärjestelmä on kaksijärjestelmä, jossa tarvitaan vain kahta numeroa: 0 ja 1.
             <img src={binaarilukutaulukko} alt='Binäärilukutaulukko' style={{maxWidth: '100%', float: 'right', margin: '20px'}}/>
             <br />

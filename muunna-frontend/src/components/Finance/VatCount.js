@@ -12,16 +12,19 @@ const VatCount = () => {
     })
 
     const handleValueChange = (value) => {
+        value = value.replace(/,/g, '.')
         setValueWithoutTax(value)
         setValueWithTax(value * (1 + vatPercent / 100))
     }
 
     const handleValueWithTaxChange = (value) => {
+        value = value.replace(/,/g, '.')
         setValueWithTax(value)
         setValueWithoutTax(value / (1 + vatPercent / 100))
     }
 
     const handleVatChange = (value) => {
+        value = value.replace(/,/g, '.')
         setVatPercent(value)
         setValueWithoutTax(valueWithTax / (1 + value / 100))
 

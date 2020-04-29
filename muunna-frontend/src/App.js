@@ -29,12 +29,12 @@ function App() {
     <Container style={containerStyle} className="mb-5">
     <Router>
         <Row className="mb-5">
-          <Col>
+          <Col lg={true}>
           <Menu />
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col xs={12} md={8}>
             <Route exact path="/" render={() => <Home />} />
             <Route exact path="/matematiikka" render={() => <Math />} />
             <Route path="/matematiikka/prosenttilaskuri" render={() => <PercentCalc />} />
@@ -51,7 +51,7 @@ function App() {
             <Route exact path="/yksikkomuuntimet" render={() => <Conversion />} />
             <Route path="/yksikkomuuntimet/pituusmuunnin/" render={() => <LengthCon />} />
           </Col>
-          <Col>
+          <Col xs={6} md={4}>
             <Sidebar />
           </Col>
         </Row>
