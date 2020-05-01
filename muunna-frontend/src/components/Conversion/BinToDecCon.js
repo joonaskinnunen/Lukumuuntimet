@@ -66,9 +66,11 @@ const BinToDecCon = () => {
                 </Breadcrumb.Item>
             </Breadcrumb>
             <div>
+            <div style={{maxWidth: '90%'}}>
             <h2>
             Binääri-desimaalilukumuunnin
             </h2>
+            </div>
             <p>Tällä muuntimella voit muuntaa binääriluvun niin sanotuksi normaaliksi luvuksi eli desimaaliluvuksi.</p>
             <div>
                 <form>
@@ -78,7 +80,7 @@ const BinToDecCon = () => {
                     </p>
                 </form>
                 <Notification message={message} result={decimal} errorMessage={errorMessage} />
-                <p>Katso myös <a href="/yksikkomuuntimet/desimaali-binaari-muunnin">desimaali-binäärilukumuunnin</a>.</p>
+                <p>Katso myös <a href="./desimaali-binaari-muunnin">desimaali-binäärilukumuunnin</a>.</p>
                 </div>
             </div>
             <hr />

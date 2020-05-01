@@ -66,7 +66,7 @@ const DecToBinCon = () => {
                     </p>
                 </form>
                 <Notification message={message} result={binary} errorMessage={errorMessage} />
-                <p>Katso myös <a href="/yksikkomuuntimet/binaari-desimaali-muunnin">binääri-desimaalilukumuunnin</a>.</p>
+                <p>Katso myös <a href="./binaari-desimaali-muunnin">binääri-desimaalilukumuunnin</a>.</p>
             </div>
             </div>
             <hr />
