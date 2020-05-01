@@ -14,7 +14,7 @@ const BinToDecCon = () => {
 
     useEffect(() => {
         handleChange(binary)
-        document.title = 'Binääri-desimaaliluku muunnin - Laske & Muunna'
+        document.title = 'Binääri-desimaalilukumuunnin - Laske & Muunna'
     })
 
     const handleChange = (value) => {
@@ -62,12 +62,12 @@ const BinToDecCon = () => {
                 </Breadcrumb.Item>
                 </LinkContainer>
                 <Breadcrumb.Item active>
-                Binääri-desimaaliluku muunnin
+                Binääri-desimaalilukumuunnin
                 </Breadcrumb.Item>
             </Breadcrumb>
             <div>
             <h2>
-            Binääri-desimaaliluku muunnin
+            Binääri-desimaalilukumuunnin
             </h2>
             <p>Tällä muuntimella voit muuntaa binääriluvun niin sanotuksi normaaliksi luvuksi eli desimaaliluvuksi.</p>
             <div>
@@ -77,7 +77,9 @@ const BinToDecCon = () => {
                         </input>
                     </p>
                 </form>
-                <Notification message={message} result={decimal} errorMessage={errorMessage} />            </div>
+                <Notification message={message} result={decimal} errorMessage={errorMessage} />
+                <p>Katso myös <a href="/yksikkomuuntimet/desimaali-binaari-muunnin">desimaali-binäärilukumuunnin</a>.</p>
+                </div>
             </div>
             <hr />
             <h4>Desimaalijärjestelmä</h4>

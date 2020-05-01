@@ -8,6 +8,10 @@ const Conversion = () => {
         document.title = 'Yksikkömuuntimet - Laske & Muunna'
     })
 
+    const contentStyle = {
+        marginTop: '30px'
+    }
+
     return (
         <div>
             <Breadcrumb>
@@ -24,7 +28,8 @@ const Conversion = () => {
             Yksikkömuuntimet
             </h2>
             <p>
-                Erilaisia hyödyllisiä yksikkömuuntimia arkipäivisiin ja vähemmän arkipäivisiin tarpeisiin.
+                Erilaisia hyödyllisiä yksikkömuuntimia arkipäivisiin ja vähemmän arkipäivisiin tarpeisiin.<br />
+                Yksikkömuuntimilla voit muuttaa erilaisia yksiköitä, kuten mittayksiköitä ja lukuja toiseen yksikköön.
             </p>
             <Nav fill variant="tabs" className="flex-column">
                 <LinkContainer to="/yksikkomuuntimet/pituusmuunnin">
@@ -34,7 +39,7 @@ const Conversion = () => {
                     <Nav.Link>Desimaali-binäärilukumuunnin</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/yksikkomuuntimet/binaari-desimaali-muunnin">
-                    <Nav.Link>Binääri-desimaaliluku muunnin</Nav.Link>
+                    <Nav.Link>Binääri-desimaalilukumuunnin</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/yksikkomuuntimet/desimaali-heksadesimaali-muunnin">
                     <Nav.Link>Desimaali-heksadesimaalimuunnin</Nav.Link>
@@ -43,6 +48,10 @@ const Conversion = () => {
                     <Nav.Link>Desimaali-oktaalilukumuunnin</Nav.Link>
                 </LinkContainer>
             </Nav>
+            <div style={contentStyle}>
+            <p>Sivuiltamme löydät muuntimia, joilla voit muuntaa erilaisia mittayksiköitä. Voit esimerkiksi muuntaa senttimetrit tuumiksi tai toisinpäin, tuumat senttimetreiksi. </p>
+            <p>Jos mietit miten binäärilukuja luetaan, katso lisätietoa binääriluvuista ja <a href="/yksikkomuuntimet/binaari-desimaali-muunnin">muuta binääriluvut desimaaliluvuiksi Binääri-desimaalilukumuuntimella.</a></p>
+            </div>
         </div>
     )
 }

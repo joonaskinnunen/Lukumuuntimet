@@ -51,7 +51,7 @@ function App() {
             <Route exact path="/yksikkomuuntimet" render={() => <Conversion />} />
             <Route path="/yksikkomuuntimet/pituusmuunnin/" render={() => <LengthCon />} />
           </Col>
-          <Col xs={6} md={4}>
+          <Col xs={12} md={4}>
             <Sidebar />
           </Col>
         </Row>
