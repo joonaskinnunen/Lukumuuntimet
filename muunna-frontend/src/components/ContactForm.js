@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Breadcrumb, Form, Button } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 import axios from 'axios'
@@ -8,6 +8,7 @@ const ContactForm = () => {
     const [values, setValues] = useState({ name: '', email: '', message: '' })
     const [notificationMessages, setNotificationMessages] = useState({ notificationMessage: '', notificationErrorMessage: ''})
     const [validated, setValidated] = useState(false)
+    const formRef = useRef(null)
 
     useEffect(() => {
         document.title = 'Ota yhteyttä - Laske & Muunna'
@@ -17,6 +18,10 @@ const ContactForm = () => {
         margin: '20px'
     }
 
+    const handleReset = () => {
+        formRef.current.reset()
+        setValidated(false)
+    }
     const handleEmailChange = (value) => {
         setValues({ ...values, email: value })
     }
@@ -44,18 +49,19 @@ const ContactForm = () => {
                     console.log("Viesti lähetetty.")
                     setNotificationMessages({notificationErrorMessage: '', notificationMessage: 'Viestin lähetys onnistui. Kiitos viestistäsi!'})
                     setValues({ name: '', email: '', message: '' })
-                    setTimeout(() => setNotificationMessages({notificationErrorMessage: '', notificationMessage: ''}), 5000)
+                    setTimeout(() => setNotificationMessages({notificationErrorMessage: '', notificationMessage: ''}), 10000)
                     console.log(notificationMessages)
                 } else if (response.data.status === 'fail') {
                     console.log(response.data)
                     console.log("Viestin lähettäminen epäonnistui.")
                     setNotificationMessages({notificationErrorMessage: 'Viestin lähettäminen epäonnistui.', notificationMessage: ''})
-                    setTimeout(() => setNotificationMessages({notificationErrorMessage: '', notificationMessage: ''}), 5000)
+                    setTimeout(() => setNotificationMessages({notificationErrorMessage: '', notificationMessage: ''}), 10000)
                 }
             })
         }
 
-        setValidated(true);
+        setValidated(true)
+        handleReset()
     }
 
     return (
@@ -77,7 +83,7 @@ const ContactForm = () => {
                 Kehitysehdotuksia? Huomasitko virheen sivustolla? Voit ottaa yhteyttä sivuston ylläpitoon alla olevalla lomakkeella.
             </p>
             <div style={formDivStyle}>
-                <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                <Form noValidate validated={validated} onSubmit={handleSubmit} ref={formRef}>
                     <Form.Group>
                         <Form.Label>Nimi</Form.Label>
                         <Form.Control placeholder="Syötä nimesi" required value={values.name} onChange={({ target }) => handleNameChange(target.value)}/>

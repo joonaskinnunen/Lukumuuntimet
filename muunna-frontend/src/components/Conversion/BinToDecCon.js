@@ -86,9 +86,10 @@ const BinToDecCon = () => {
             <hr />
             <h4>Desimaalijärjestelmä</h4>
             <p>Normaalisti käytämme arkielämässä normaalia 10-numeroista lukujärjestelmää (luvut 0-9), eli desimaalijärjestelmää.<br /> Numeron paikka luvussa on merkitsevä ja kullakin numerolla on erilainen painoarvo sen mukaan, mikä on numeron sijainti
-            luvussa. Numeroiden painoarvot kasvavat oikealta vasemmalle: 1, 10, 100, 1000, 10000... <br />10 numerojärjestelmässä kantaluku on 10 ja numeroiden painoarvot saadaan kantaluvun potensseista: <var>1=10<sup>0</sup>, 10=10<sup>1</sup>, 100=10<sup>2</sup>, 1 000=10<sup>3</sup>, 10 000=10<sup>4</sup></var>
+            luvussa. Numeroiden painoarvot kasvavat oikealta vasemmalle: 1, 10, 100, 1000, 10000... <br />10 numerojärjestelmässä kantaluku on 10 ja numeroiden painoarvot saadaan kantaluvun potensseista: <var>1=10<sup>0</sup>, 10=10<sup>1</sup>, 100=10<sup>2</sup>, 1 000=10<sup>3</sup>, 10 000=10<sup>4</sup></var></p>
             <img src={desimaalijarjestelma} alt='Desimaaliluku' style={{maxWidth: '100%'}}/>
             <h4>Binäärijärjestelmä</h4>
+            <p>
             Binäärijärjestelmä on teknisesti yksinkertaisin lukujärjestelmä. Binäärijärjestelmä on kaksijärjestelmä, jossa tarvitaan vain kahta numeroa: 0 ja 1.
             <img src={binaarilukutaulukko} alt='Binäärilukutaulukko' style={{maxWidth: '100%', float: 'right', margin: '20px'}}/>
             <br />

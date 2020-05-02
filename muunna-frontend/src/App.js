@@ -57,6 +57,9 @@ function App() {
             <Sidebar />
           </Col>
         </Row>
+        <hr />
+        <hr />
+        <p style={{marginTop: '20px'}}>Löysitkö virheen sivustolta? Haluatko antaa palautetta? <a href="https://www.laskejamuunna.fi/ota-yhteytta">Ota yhteyttä meihin tästä</a>.</p>
         <Footer />
     </Router>
     </Container>
