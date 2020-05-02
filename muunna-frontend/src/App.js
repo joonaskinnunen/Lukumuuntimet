@@ -20,6 +20,7 @@ import Conversion from './components/Conversion/Conversion'
 import LengthCon from './components/Conversion/LengthCon'
 import Math from './components/Math/Math'
 import PercentCalc from './components/Math/PercentCalc'
+import ContactForm from './components/ContactForm'
 
 function App() {
     const containerStyle = {
@@ -50,6 +51,7 @@ function App() {
             <Route path="/terveys/painoindeksilaskuri/" render={() => <BMICalc />} />
             <Route exact path="/yksikkomuuntimet" render={() => <Conversion />} />
             <Route path="/yksikkomuuntimet/pituusmuunnin/" render={() => <LengthCon />} />
+            <Route exact path="/ota-yhteytta" render={() => <ContactForm />} />
           </Col>
           <Col xs={12} md={4}>
             <Sidebar />

@@ -100,7 +100,7 @@ const CharCount = () => {
             <p>
                 Laskuri laskee syötetyn tekstin merkkien ja sanojen määrän.
             </p>
-            <p><b>Teksti sisältää {results.length.charsWithoutSpaces} merkkiä ja <b>{results.words.numOfWords}</b> sanaa.</b></p>
+            <p><b>Teksti sisältää <b>{results.length.charsWithoutSpaces}</b> merkkiä ja <b>{results.words.numOfWords}</b> sanaa.</b></p>
             <div className="input-group">
                 <div className="input-group-prepend">
                     <span className="input-group-text" id="basic-addon">
