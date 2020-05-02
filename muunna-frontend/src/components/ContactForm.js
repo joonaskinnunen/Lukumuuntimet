@@ -37,7 +37,7 @@ const ContactForm = () => {
         } else {
             axios({
                 method: "POST",
-                url: "http://localhost:3001/send",
+                url: "https://www.laskejamuunna.fi/send",
                 data: values
             }).then((response) => {
                 if (response.data.status === 'success') {
