@@ -40,6 +40,7 @@ const ContactForm = () => {
         if (form.checkValidity() === false) {
             event.stopPropagation();
         } else {
+            setNotificationMessages({notificationErrorMessage: '', notificationMessage: 'Viestiä lähetetään...'})
             axios({
                 method: "POST",
                 url: "https://www.laskejamuunna.fi/send",

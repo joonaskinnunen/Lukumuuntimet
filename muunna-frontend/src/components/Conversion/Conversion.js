@@ -33,23 +33,23 @@ const Conversion = () => {
             </p>
             <Nav fill variant="tabs" className="flex-column">
                 <LinkContainer to="/yksikkomuuntimet/pituusmuunnin">
-                    <Nav.Link>Pituusmuunnin / etäisyysmuunnin</Nav.Link>
+                    <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Pituusmuunnin / etäisyysmuunnin</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/yksikkomuuntimet/desimaali-binaari-muunnin">
-                    <Nav.Link>Desimaali-binäärilukumuunnin</Nav.Link>
+                    <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Desimaali-binäärilukumuunnin</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/yksikkomuuntimet/binaari-desimaali-muunnin">
-                    <Nav.Link>Binääri-desimaalilukumuunnin</Nav.Link>
+                    <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Binääri-desimaalilukumuunnin</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/yksikkomuuntimet/desimaali-heksadesimaali-muunnin">
-                    <Nav.Link>Desimaali-heksadesimaalimuunnin</Nav.Link>
+                    <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Desimaali-heksadesimaalimuunnin</Nav.Link>
                 </LinkContainer>
                 <LinkContainer to="/yksikkomuuntimet/desimaali-oktaaliluku-muunnin">
-                    <Nav.Link>Desimaali-oktaalilukumuunnin</Nav.Link>
+                    <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Desimaali-oktaalilukumuunnin</Nav.Link>
                 </LinkContainer>
             </Nav>
             <div style={contentStyle}>
-            <p>Sivuiltamme löydät muuntimia, joilla voit muuntaa erilaisia mittayksiköitä. Voit esimerkiksi muuntaa senttimetrit tuumiksi tai toisinpäin, tuumat senttimetreiksi. </p>
+            <p>Sivuiltamme löydät muuntimia, joilla voit muuntaa erilaisia mittayksiköitä. Voit esimerkiksi muuntaa <a href="https://www.laskejamuunna.fi/yksikkomuuntimet/pituusmuunnin">senttimetrit tuumiksi</a> tai toisinpäin, <a href="https://www.laskejamuunna.fi/yksikkomuuntimet/pituusmuunnin">tuumat senttimetreiksi</a>. </p>
             <p>Jos mietit miten binäärilukuja luetaan, katso lisätietoa binääriluvuista ja <a href="/yksikkomuuntimet/binaari-desimaali-muunnin">muuta binääriluvut desimaaliluvuiksi Binääri-desimaalilukumuuntimella.</a></p>
             </div>
         </div>

@@ -28,7 +28,7 @@ const Finance = () => {
             </p>
             <Nav fill variant="tabs" className="flex-column">
                 <LinkContainer to="/raha/alv-laskuri/">
-                    <Nav.Link>ALV-laskuri</Nav.Link>
+                    <Nav.Link><i className="fas fa-percent iconsStyle"></i>ALV-laskuri</Nav.Link>
                 </LinkContainer>
             </Nav>
         </div>
