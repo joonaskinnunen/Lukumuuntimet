@@ -11,12 +11,14 @@ const BMICalc = () => {
 
     const handleHeightChange = (value) => {
         console.log(values)
+        value = value.replace(/,/g, '.')
         setValues({ ...values, height: value, bmi: values.weight / (value / 100) / (value / 100) })
         console.log(values)
     }
 
     const handleWeightChange = (value) => {
         console.log(values)
+        value = value.replace(/,/g, '.')
         setValues({ ...values, weight: value, bmi: value / (values.height / 100) / (values.height / 100) })
         console.log(values)
     }

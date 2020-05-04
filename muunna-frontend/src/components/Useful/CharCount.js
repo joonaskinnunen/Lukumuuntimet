@@ -38,11 +38,12 @@ const CharCount = () => {
         str = str.replace(/[ ]{2,}/gi,' ')
         str = str.replace(/\n /,"\n")
         str = str.split(' ')
+        str = str.map((x) => x.replace(/[.,;!?]/g, ''))
         let counts = {}
         str.forEach(function(x) { counts[x] = (counts[x] || 0)+1 })
         let wordsArr = Object.entries(counts)
         wordsArr = wordsArr.sort((a, b) => b[1] - a[1])
-        let sumOfLengths = 0;
+        let sumOfLengths = 0
         wordsArr.map(x => sumOfLengths += x[0].length * x[1])
         let words = {
             popularWords: wordsArr.length > 10 ? wordsArr.splice(9, wordsArr.length-1) : wordsArr,
