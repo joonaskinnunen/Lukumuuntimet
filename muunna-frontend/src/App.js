@@ -44,13 +44,13 @@ function App() {
             <Route path="/yksikkomuuntimet/desimaali-heksadesimaali-muunnin" render={() => <DecToHexCon />} />
             <Route path="/yksikkomuuntimet/desimaali-oktaaliluku-muunnin" render={() => <DecToOctCon />} />
             <Route exact path="/hyoty" render={() => <Useful />} />
-            <Route path="/hyoty/merkki-ja-sanalaskuri/" render={() => <CharCount />} />
+            <Route path="/hyoty/merkki-ja-sanalaskuri" render={() => <CharCount />} />
             <Route exact path="/raha" render={() => <Finance />} />
-            <Route path="/raha/alv-laskuri/" render={() => <VatCount />} />
+            <Route path="/raha/alv-laskuri" render={() => <VatCount />} />
             <Route exact path="/terveys" render={() => <Health />} />
-            <Route path="/terveys/painoindeksilaskuri/" render={() => <BMICalc />} />
+            <Route path="/terveys/painoindeksilaskuri" render={() => <BMICalc />} />
             <Route exact path="/yksikkomuuntimet" render={() => <Conversion />} />
-            <Route path="/yksikkomuuntimet/pituusmuunnin/" render={() => <LengthCon />} />
+            <Route path="/yksikkomuuntimet/pituusmuunnin" render={() => <LengthCon />} />
             <Route exact path="/ota-yhteytta" render={() => <ContactForm />} />
           </Col>
           <Col xs={12} md={4}>

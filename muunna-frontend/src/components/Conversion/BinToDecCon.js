@@ -98,7 +98,9 @@ const BinToDecCon = () => {
             Binäärilukujärjestelmässä lukujen painoarvot saadaan kantaluvun (2) potensseina, samalla tavalla kuin 10-järjestelmässä.<br />
             <var>1=2<sup>0</sup>, 2=2<sup>1</sup>, 4=2<sup>2</sup>, 8=2<sup>3</sup>, 16=2<sup>4</sup>, 32=2<sup>5</sup>, 64=2<sup>6</sup></var><br />
             Lukujen painoarvot kasvaa oikealta vasemmalle: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 jne.<br />
-            Yllä luetellut luvut saattaa näyttää hyvin tutuilta, koska ne tulevat jatkuvasti vastaan tietotekniikassa. 
+            Yllä luetellut luvut saattaa näyttää hyvin tutuilta, koska ne tulevat jatkuvasti vastaan tietotekniikassa.
+            <br />
+            Binääriluku saadaan kerrottua helposti kahdella lisäämällä 0 luvun perään, eli esimerkiksi 1010B on desimaalilukuna 10 ja 10100B on desimaalilukuna 20.
             <img src={binaarijarjestelma} alt='Binäärilukujärjestelmä' style={{maxWidth: '100%'}}/>
             <br />
             </p>
