@@ -5,7 +5,7 @@ import { LinkContainer } from "react-router-bootstrap"
 const CharCount = () => {
 
     useEffect(() => {
-        document.title = 'Merkki- ja sanalaskuri - Laske & Muunna'
+        document.title = 'Sanalaskuri - Laske & Muunna'
     })
 
     const [string, setString] = useState('')
@@ -92,14 +92,14 @@ const CharCount = () => {
                     </Breadcrumb.Item>
                 </LinkContainer>
                 <Breadcrumb.Item active>
-                Merkki- ja sanalaskuri
+                Sanalaskuri
                 </Breadcrumb.Item>
             </Breadcrumb>
             <h2>
-                Merkki- ja sanalaskuri
+                Sanalaskuri
             </h2>
             <p>
-                Laskuri laskee syötetyn tekstin merkkien ja sanojen määrän.
+                Sanalaskuri / merkkilaskuri laskee syötetyn tekstin merkkien ja sanojen määrän.
             </p>
             <p><b>Teksti sisältää <b>{results.length.charsWithoutSpaces}</b> merkkiä ja <b>{results.words.numOfWords}</b> sanaa.</b></p>
             <div className="input-group">
@@ -108,7 +108,7 @@ const CharCount = () => {
                     <i className="fas fa-pencil-alt prefix"></i>
                     </span>
                 </div>
-                <textarea className="form-control" rows="10" value={string} onChange={({target}) => handleChange(target.value)}></textarea>
+                <textarea className="form-control" rows="10" value={string} onChange={({target}) => handleChange(target.value)} placeholder='Syötä tekstisi tähän. Tämä sanalaskuri / merkkilaskuri laskee tekstin merkkien ja sanojen määrän.'></textarea>
             </div>
             <p style={pStyle}>Teksti sisältää:</p>
             <ul>
@@ -135,6 +135,10 @@ const CharCount = () => {
             <ul>
                 {results.words.popularWords.map(x => <li key={x}>{x[0]} (<b>{x[1]}</b> kpl. <b>{Math.round(x[1] / results.words.numOfWords * 100 * 100) / 100}</b> %)</li>)}
             </ul>
+            <hr />
+            <p><b>Merkkilaskuri / sanalaskuri</b> on laskuri, jolla voit laskea syötetyn tekstin merkkien, lauseiden, kappaleiden ja sanojen määrän. Laskuri näyttää myös tekstissä yleisimmin esiintyvät sanat ja sanojen keskimääräisen pituuden.</p>
+            <p>Voit liittää haluamasi tekstin esimerkiksi Wordista tai muusta tekstinkäsittelyohjelmasta tai vaikka verkkosivulta laskurin tekstikenttään ja laskuri näyttää merkkien ja sanojen määrän ja muut tiedot tekstistä.</p>
+            <p>Voit hyödyntää sanalaskuria esimerkiksi jos kirjoitat esseetä ja esseen on täytettävä vähimmäis-sanamäärä.</p>
         </div>
     )
 }

@@ -28,9 +28,6 @@ const DecToHexCon = () => {
             setMessage('')
             setErrorMessage('')
         }
-        console.log(hex)
-        console.log(decimal)
-        console.log(message)
     }
 
     const convertDectoHex = (dec) => {
@@ -63,7 +60,7 @@ const DecToHexCon = () => {
             </h2>
             <div>
                 <p>
-                    Voit muuttaa tällä muuntimella numeron heksaluvuksi. Syötä alle muunnettava luku, niin näet muunnetun heksadesimaaliluvun.
+                    Voit muuttaa tällä heksadesimaalimuuntimella numeron heksaluvuksi. Syötä alle muunnettava luku, niin näet muunnetun heksadesimaaliluvun.
                 </p>
                 <form>
                     <p>

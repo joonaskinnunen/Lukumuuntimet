@@ -49,7 +49,7 @@ const LengthCon = () => {
                 Pituusmuunnin / etäisyysmuunnin
             </h2>
             <p>
-                Syötä arvo johonkin alla olevan laskurin kentistä. Laskuri näyttää muiden yksiköiden muunnetut arvot. Voit muuntaa muuntimella esimerkiksi senttimetrit tuumiksi tai toisinpäin, eli tuumat senttimetreiksi.
+                Syötä arvo johonkin alla olevan laskurin kentistä. Laskuri näyttää muiden yksiköiden muunnetut arvot. Voit muuntaa muuntimella esimerkiksi senttimetrit tuumiksi, millimetrit kilometreiksi tai toisinpäin.
             </p>
             <Notification message={values.message} errorMessage={values.errorMessage} />
             <label><b>Millimetri:</b></label>
