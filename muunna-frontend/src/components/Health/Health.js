@@ -13,6 +13,10 @@ const Finance = () => {
         marginRight: '5px'
     }
 
+    const contentStyle = {
+        marginTop: '30px'
+    }
+
     return (
         <div>
             <Breadcrumb>
@@ -36,6 +40,9 @@ const Finance = () => {
                     <Nav.Link><i className="fas fa-weight" style={iconsStyle}></i>Painoindeksilaskuri</Nav.Link>
                 </LinkContainer>
             </Nav>
+            <div style={contentStyle}>
+                Terveyteen liittyvillä laskimillamme voit esimerkiksi <a href="/terveys/painoindeksilaskuri/">laskea painoindeksisi</a>.
+            </div>
         </div>
     )
 }

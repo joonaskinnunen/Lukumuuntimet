@@ -20,6 +20,7 @@ import Conversion from './components/Conversion/Conversion'
 import LengthCon from './components/Conversion/LengthCon'
 import Math from './components/Math/Math'
 import PercentCalc from './components/Math/PercentCalc'
+import Multiplication from './components/Math/Multiplication'
 import ContactForm from './components/ContactForm'
 import UrlNotFound from './components/UrlNotFound'
 
@@ -41,6 +42,7 @@ function App() {
               <Route exact path="/" render={() => <Home />} />
               <Route exact path="/matematiikka" render={() => <Math />} />
               <Route exact path="/matematiikka/prosenttilaskuri" render={() => <PercentCalc />} />
+              <Route exact path="/matematiikka/kertotaulu" render={() => <Multiplication />} />
               <Route exact path="/yksikkomuuntimet/binaari-desimaali-muunnin" render={() => <BinToDecCon />} />
               <Route exact path="/yksikkomuuntimet/desimaali-binaari-muunnin" render={() => <DecToBinCon />} />
               <Route exact path="/yksikkomuuntimet/desimaali-heksadesimaali-muunnin" render={() => <DecToHexCon />} />

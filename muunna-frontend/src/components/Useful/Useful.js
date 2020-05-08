@@ -8,16 +8,20 @@ const Useful = () => {
         document.title = 'Hyöty - Laske & Muunna'
     })
 
+    const contentStyle = {
+        marginTop: '30px'
+    }
+
     return (
         <div>
             <Breadcrumb>
                 <LinkContainer to="../">
-                <Breadcrumb.Item>
-                Alkuun
+                    <Breadcrumb.Item>
+                        Alkuun
                 </Breadcrumb.Item>
                 </LinkContainer>
                 <Breadcrumb.Item active>
-                Hyöty
+                    Hyöty
                 </Breadcrumb.Item>
             </Breadcrumb>
             <h2>
@@ -31,6 +35,14 @@ const Useful = () => {
                     <Nav.Link><i className="fas fa-sort-amount-down iconsStyle"></i>Merkki- ja sanalaskuri</Nav.Link>
                 </LinkContainer>
             </Nav>
+            <div style={contentStyle}>
+                <p>
+                    Hyöty-osiosta löydät erilaisia laskimia ja muuntimia arkisiin asioihin.
+                </p>
+                <p>
+                    Voit esimerkiksi laskea tekstin sanojen ja merkkien määrän <a href="https://www.laskejamuunna.fi/hyoty/merkki-ja-sanalaskuri/">sanalaskurilla</a>.
+                </p>
+            </div>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { Breadcrumb, Nav } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 
@@ -16,16 +16,16 @@ const Conversion = () => {
         <div>
             <Breadcrumb>
                 <LinkContainer to="../">
-                <Breadcrumb.Item>
-                Alkuun
+                    <Breadcrumb.Item>
+                        Alkuun
                 </Breadcrumb.Item>
                 </LinkContainer>
                 <Breadcrumb.Item active>
-                Yksikkömuuntimet
+                    Yksikkömuuntimet
                 </Breadcrumb.Item>
             </Breadcrumb>
             <h2>
-            Yksikkömuuntimet
+                Yksikkömuuntimet
             </h2>
             <p>
                 Erilaisia hyödyllisiä yksikkömuuntimia arkipäivisiin ja vähemmän arkipäivisiin tarpeisiin.<br />
@@ -49,8 +49,9 @@ const Conversion = () => {
                 </LinkContainer>
             </Nav>
             <div style={contentStyle}>
-            <p>Sivuiltamme löydät muuntimia, joilla voit muuntaa erilaisia mittayksiköitä. Voit esimerkiksi muuntaa <a href="https://www.laskejamuunna.fi/yksikkomuuntimet/pituusmuunnin">senttimetrit tuumiksi</a> tai toisinpäin, <a href="https://www.laskejamuunna.fi/yksikkomuuntimet/pituusmuunnin">tuumat senttimetreiksi</a>. </p>
-            <p>Jos mietit miten binäärilukuja luetaan, katso lisätietoa binääriluvuista ja <a href="/yksikkomuuntimet/binaari-desimaali-muunnin">muuta binääriluvut desimaaliluvuiksi Binääri-desimaalilukumuuntimella.</a></p>
+                <p>Sivuiltamme löydät muuntimia, joilla voit muuntaa erilaisia mittayksiköitä. Voit esimerkiksi muuntaa <a href="https://www.laskejamuunna.fi/yksikkomuuntimet/pituusmuunnin">senttimetrit tuumiksi</a> tai toisinpäin, <a href="https://www.laskejamuunna.fi/yksikkomuuntimet/pituusmuunnin">tuumat senttimetreiksi</a>. </p>
+                <p>Jos mietit miten binäärilukuja luetaan, katso lisätietoa binääriluvuista ja <a href="/yksikkomuuntimet/binaari-desimaali-muunnin">muuta binääriluvut desimaaliluvuiksi Binääri-desimaalilukumuuntimella. </a>
+                Voit myös <a href="/yksikkomuuntimet/desimaali-heksadesimaali-muunnin">muuttaa lukuja heksadesimaaliluvuiksi</a> tai <a href="/yksikkomuuntimet/desimaali-oktaaliluku-muunnin">oktaaliluvuiksi</a>.</p>
             </div>
         </div>
     )
