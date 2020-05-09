@@ -17,7 +17,7 @@ const Footer = () => {
                         <br />
                     <a href="https://www.laskejamuunna.fi/terveys/painoindeksilaskuri">Painoindeksilaskuri</a>
                     <br />
-                    <a href="https://www.laskejamuunna.fi/hyoty/merkki-ja-sanalaskuri">Merkki- ja sanalaskuri</a>
+                    <a href="https://www.laskejamuunna.fi/hyoty/merkki-ja-sanalaskuri">Sanalaskuri</a>
                     <br />
                     <a href="https://www.laskejamuunna.fi/yksikkomuuntimet/desimaali-binaari-muunnin">Desimaali-binäärilukumuunnin</a>
                     <br />

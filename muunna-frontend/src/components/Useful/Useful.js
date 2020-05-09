@@ -32,7 +32,7 @@ const Useful = () => {
             </p>
             <Nav fill variant="tabs" className="flex-column">
                 <LinkContainer to="/hyoty/merkki-ja-sanalaskuri/">
-                    <Nav.Link><i className="fas fa-sort-amount-down iconsStyle"></i>Merkki- ja sanalaskuri</Nav.Link>
+                    <Nav.Link><i className="fas fa-sort-amount-down iconsStyle"></i>Sanalaskuri</Nav.Link>
                 </LinkContainer>
             </Nav>
             <div style={contentStyle}>

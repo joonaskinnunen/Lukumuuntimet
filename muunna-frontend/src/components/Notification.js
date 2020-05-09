@@ -4,7 +4,7 @@ import { Alert } from 'react-bootstrap'
 const Notification = (props) => {
     if(props.message.length > 0) {
         return (
-            <Alert variant="success">
+            <Alert variant="success" style={props.style}>
                 <Alert.Heading>{props.result}</Alert.Heading>
                 <p>
                 <b>{props.message}</b>
