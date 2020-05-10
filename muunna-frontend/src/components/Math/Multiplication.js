@@ -18,6 +18,8 @@ const Multiplication = () => {
         return newArr
     }
 
+    const values = getTableValues()
+
     const randomizeQuizzes = () => {
         let arr = []
         for (let i = 0; i < 10; i++) {
@@ -30,7 +32,6 @@ const Multiplication = () => {
         return arr
     }
 
-    const [values, setValues] = useState(getTableValues())
     const [numbersToMultiply, setNumbersToMultiply] = useState({})
     const [quizzes, setQuizzes] = useState(randomizeQuizzes())
     const [submitClicked, setSubmitClicked] = useState(false)

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Breadcrumb, InputGroup, FormControl, Table, Form, Row, Col } from 'react-bootstrap'
+import { Breadcrumb, InputGroup, FormControl, Table } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 
 const VatCount = () => {
@@ -174,7 +174,7 @@ const VatCount = () => {
                     </tr>
                     <tr>
                         <td>
-                            Lähde: <a href='https://www.vero.fi/yritykset-ja-yhteisot/tietoa-yritysverotuksesta/arvonlisaverotus/arvonlis%C3%A4veroprosentit/' target='_blank'>vero.fi</a>
+                            Lähde: <a href='https://www.vero.fi/yritykset-ja-yhteisot/tietoa-yritysverotuksesta/arvonlisaverotus/arvonlis%C3%A4veroprosentit/' target='_blank' rel="noopener noreferrer">vero.fi</a>
                         </td>
                         <td>
 
