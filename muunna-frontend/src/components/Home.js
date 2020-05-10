@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Nav } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
+import { Link } from "react-router-dom"
 
 const Home = () => {
 
@@ -38,18 +39,18 @@ const Home = () => {
                 </LinkContainer>
             </Nav>
             <div style={contentDivStyle}>
-                <p>Laske & Muunna on sivusto, josta löydät laskimia ja muuntimia monenlaisiin käyttötarkoituksiin.</p><p>Voit esimerkiksi muuttaa eri pituus tai mittayksiköitä toiseen <a href="/yksikkomuuntimet/pituusmuunnin">pituus / etäisyysmuuntimella</a>.
+                <p>Laske & Muunna on sivusto, josta löydät laskimia ja muuntimia monenlaisiin käyttötarkoituksiin.</p><p>Voit esimerkiksi muuttaa eri pituus tai mittayksiköitä toiseen <Link to="/yksikkomuuntimet/pituusmuunnin">pituus / etäisyysmuuntimella</Link>.
                 </p>
                 <p>
-                    Jos opiskelet tai työskentelet tietokoneiden kanssa, binääri-, heksa- tai oktaalilukumuuntimista voi olla hyötyä. Löydät nämä lukumuuntimet <a href="/yksikkomuuntimet">yksikkömuuntimet-sivulta</a>.
+                    Jos opiskelet tai työskentelet tietokoneiden kanssa, binääri-, heksa- tai oktaalilukumuuntimista voi olla hyötyä. Löydät nämä lukumuuntimet <Link to="/yksikkomuuntimet">yksikkömuuntimet-sivulta</Link>.
                 <br />
-                Opiskellessa monesti tehtäviksi annettuihin esseisiin ja tehtäviin kuuluu merkki- tai sanamäärävaatimuksia. Voit tarkistaa kirjoittamasi tekstin merkki- ja sanamäärän <a href="/hyoty/merkki-ja-sanalaskuri/">merkki- ja sanalaskurilla</a>.
+                Opiskellessa monesti tehtäviksi annettuihin esseisiin ja tehtäviin kuuluu merkki- tai sanamäärävaatimuksia. Voit tarkistaa kirjoittamasi tekstin merkki- ja sanamäärän <Link to="/hyoty/merkki-ja-sanalaskuri/">merkki- ja sanalaskurilla</Link>.
                 </p>
                 <p>
-                    Jos taas mietit omaa painoa, terveyteen liittyvien laskureiden osiosta löytyy esimerkiksi <a href="/terveys/painoindeksilaskuri">painoindeksilaskuri</a>, jolla tarkistat oman painoindeksin ja riskin sairastua painon vuoksi.
+                    Jos taas mietit omaa painoa, terveyteen liittyvien laskureiden osiosta löytyy esimerkiksi <Link to="/terveys/painoindeksilaskuri">painoindeksilaskuri</Link>, jolla tarkistat oman painoindeksin ja riskin sairastua painon vuoksi.
                 </p>
                 <p>
-                    <a href="/raha/alv-laskuri/">ALV-laskurilla</a> voit laskea arvonlisäveron määrän verottomasta tai verollisesta summasta.
+                    <Link to="/raha/alv-laskuri/">ALV-laskurilla</Link> voit laskea arvonlisäveron määrän verottomasta tai verollisesta summasta.
                 </p>
             </div>
         </div>

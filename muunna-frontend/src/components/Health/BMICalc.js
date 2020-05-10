@@ -108,6 +108,22 @@ const BMICalc = () => {
                     </tr>
                 </tbody>
             </table>
+            <h3>Painoindeksin laskeminen</h3>
+            <p>
+            Painoindeksi, eli BMI / Body Mass Index = paino kilogrammoina / pituus korotettuna toiseen potenssiin (metreinä).
+            <br />
+            <span style={{ fontWeight: 'bold' }}>
+            <var>Painoindeksi<sup style={{bottom: '-.25em', top: 'initial'}}>(kg/m<sup>2</sup>)</sup> = paino<sup style={{bottom: '-.25em', top: 'initial'}}>(kg)</sup> / pituus<sup>2</sup><sup style={{bottom: '-.25em', top: 'initial'}}>(m)</sup>.</var>
+            </span>
+            <br />
+            </p>
+            <p>
+            Esimerkiksi 80 kiloa painavan ja 180 senttiä pitkän henkilön painoindeksi lasketaan kaavalla:
+            <br />
+            <span style={{ fontWeight: 'bold' }}>
+            <var>Painoindeksi<sup style={{bottom: '-.25em', top: 'initial'}}>(kg/m<sup>2</sup>)</sup> = 80<sup style={{bottom: '-.25em', top: 'initial'}}>(kg)</sup> / 1.8<sup>2</sup><sup style={{bottom: '-.25em', top: 'initial'}}>(m)</sup> = 24.69</var>
+            </span>
+            </p>
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Notification from '../Notification'
 import { Breadcrumb } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
+import { Link } from "react-router-dom"
 import desimaalijarjestelma from '../../desimaali.png'
 import binaarijarjestelma from '../../binaarijarjestelma.png'
 import binaarilukutaulukko from '../../binaarilukutaulukko.png'
@@ -66,7 +67,7 @@ const DecToBinCon = () => {
                     </p>
                 </form>
                 <Notification message={message} result={binary} errorMessage={errorMessage} />
-                <p>Katso myös <a href="./binaari-desimaali-muunnin">binääri-desimaalilukumuunnin</a>.</p>
+                <p>Katso myös <Link to="./binaari-desimaali-muunnin">binääri-desimaalilukumuunnin</Link>.</p>
             </div>
             </div>
             <hr />

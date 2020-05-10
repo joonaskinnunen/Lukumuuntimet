@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Breadcrumb } from 'react-bootstrap'
+import { Link } from "react-router-dom"
 import Notification from '../Notification'
 import { LinkContainer } from 'react-router-bootstrap'
 import desimaalijarjestelma from '../../desimaali.png'
@@ -80,7 +81,7 @@ const BinToDecCon = () => {
                     </p>
                 </form>
                 <Notification message={message} result={decimal} errorMessage={errorMessage} />
-                <p>Katso myös <a href="./desimaali-binaari-muunnin">desimaali-binäärilukumuunnin</a>.</p>
+                <p>Katso myös <Link to="./desimaali-binaari-muunnin">desimaali-binäärilukumuunnin</Link>.</p>
                 </div>
             </div>
             <hr />

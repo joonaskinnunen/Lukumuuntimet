@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Breadcrumb, Nav } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
+import { Link } from "react-router-dom"
 
 const Finance = () => {
 
@@ -41,7 +42,7 @@ const Finance = () => {
                 </LinkContainer>
             </Nav>
             <div style={contentStyle}>
-                Terveyteen liittyvillä laskimillamme voit esimerkiksi <a href="/terveys/painoindeksilaskuri/">laskea painoindeksisi</a>.
+                Terveyteen liittyvillä laskimillamme voit esimerkiksi <Link to="/terveys/painoindeksilaskuri/">laskea painoindeksisi</Link>.
             </div>
         </div>
     )

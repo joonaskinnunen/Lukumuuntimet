@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
 import BinToDecCon from './components/Conversion/BinToDecCon'
 import DecToBinCon from './components/Conversion/DecToBinCon'
@@ -24,6 +24,7 @@ import Multiplication from './components/Math/Multiplication'
 import AdditionTable from './components/Math/AdditionTable'
 import ContactForm from './components/ContactForm'
 import UrlNotFound from './components/UrlNotFound'
+import ScrollToTop from './ScrollToTop'
 
 function App() {
   const containerStyle = {
@@ -39,6 +40,7 @@ function App() {
         </Row>
         <Row>
           <Col xs={12} md={8}>
+            <ScrollToTop>
             <Switch>
               <Route exact path="/" render={() => <Home />} />
               <Route exact path="/matematiikka" render={() => <Math />} />
@@ -60,6 +62,7 @@ function App() {
               <Route exact path="/ota-yhteytta" render={() => <ContactForm />} />
               <Route component={UrlNotFound} />
             </Switch>
+            </ScrollToTop>
           </Col>
           <Col xs={12} md={4}>
             <Sidebar />
@@ -67,7 +70,7 @@ function App() {
         </Row>
         <hr />
         <hr />
-        <p style={{ marginTop: '20px' }}>Löysitkö virheen sivustolta? Haluatko antaa palautetta? <a href="https://www.laskejamuunna.fi/ota-yhteytta">Ota yhteyttä meihin tästä</a>.</p>
+        <p style={{ marginTop: '20px' }}>Löysitkö virheen sivustolta? Haluatko antaa palautetta? <Link to="/ota-yhteytta">Ota yhteyttä meihin tästä</Link>.</p>
         <Footer />
       </Router>
     </Container>

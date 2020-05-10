@@ -1,5 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
+import { Link } from "react-router-dom"
 
 const Footer = () => {
     const style = {
@@ -15,13 +16,13 @@ const Footer = () => {
                 <Col xs={5} md={4}>
                     <p><b>Suosituimmat sivut</b>
                         <br />
-                    <a href="https://www.laskejamuunna.fi/terveys/painoindeksilaskuri">Painoindeksilaskuri</a>
+                    <Link to="/terveys/painoindeksilaskuri#">Painoindeksilaskuri</Link>
                     <br />
-                    <a href="https://www.laskejamuunna.fi/hyoty/merkki-ja-sanalaskuri">Sanalaskuri</a>
+                    <Link to="/hyoty/merkki-ja-sanalaskuri">Sanalaskuri</Link>
                     <br />
-                    <a href="https://www.laskejamuunna.fi/yksikkomuuntimet/desimaali-binaari-muunnin">Desimaali-binäärilukumuunnin</a>
+                    <Link to="/yksikkomuuntimet/desimaali-binaari-muunnin">Desimaali-binäärilukumuunnin</Link>
                     <br />
-                    <a href="https://www.laskejamuunna.fi/raha/alv-laskuri/">ALV-laskuri</a>
+                    <Link to="/raha/alv-laskuri">ALV-laskuri</Link>
                     </p>
                 </Col>
                 <Col xs={1} md={4}>

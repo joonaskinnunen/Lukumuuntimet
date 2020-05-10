@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Breadcrumb, Nav } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
+import { Link } from "react-router-dom"
 
 const Useful = () => {
 
@@ -40,7 +41,7 @@ const Useful = () => {
                     Hyöty-osiosta löydät erilaisia laskimia ja muuntimia arkisiin asioihin.
                 </p>
                 <p>
-                    Voit esimerkiksi laskea tekstin sanojen ja merkkien määrän <a href="https://www.laskejamuunna.fi/hyoty/merkki-ja-sanalaskuri/">sanalaskurilla</a>.
+                    Voit esimerkiksi laskea tekstin sanojen ja merkkien määrän <Link to="/hyoty/merkki-ja-sanalaskuri/">sanalaskurilla</Link>.
                 </p>
             </div>
         </div>
