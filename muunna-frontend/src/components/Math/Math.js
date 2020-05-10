@@ -40,6 +40,9 @@ const Math = () => {
                 <LinkContainer to="/matematiikka/kertotaulu">
                     <Nav.Link><i className="fas fa-times" style={iconsStyle}></i> Kertotaulu</Nav.Link>
                 </LinkContainer>
+                <LinkContainer to="/matematiikka/yhteenlasku">
+                    <Nav.Link><i className="fas fa-plus" style={iconsStyle}></i>Yhteenlasku</Nav.Link>
+                </LinkContainer>
             </Nav>
         </div>
     )

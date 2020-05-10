@@ -3,7 +3,7 @@ import { Navbar } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 import logo from '.././logo.svg'
 
-const Menu = () => {
+const Header = () => {
     return (
       <Navbar bg="dark" variant="dark" className="p-3">
       <LinkContainer to="/">
@@ -22,4 +22,4 @@ const Menu = () => {
     )
 }
 
-export default Menu
+export default Header

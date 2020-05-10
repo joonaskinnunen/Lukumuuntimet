@@ -4,20 +4,23 @@ import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
     return (
+        <div className='sidebarStyle'>
+        <h5>Suosituimmat sivut</h5>
         <ListGroup>
             <ListGroup.Item>
                 <Link to='/yksikkomuuntimet/desimaali-binaari-muunnin'>Desimaaliluku - binäärilukumuunnin</Link>
             </ListGroup.Item>
             <ListGroup.Item>
-                <Link to='/yksikkomuuntimet/binaari-desimaali-muunnin'>Binääriluku - desimaalilukumuunnin</Link>
+                <Link to='/hyoty/merkki-ja-sanalaskuri'>Sanalaskuri</Link>
             </ListGroup.Item>
             <ListGroup.Item>
-                <Link to='/yksikkomuuntimet/desimaali-heksadesimaali-muunnin'>Desimaaliluku - heksadesimaalilukumuunnin</Link>
+                <Link to='/matematiikka/kertotaulu'>Kertotaulu</Link>
             </ListGroup.Item>
             <ListGroup.Item>
-                <Link to='/yksikkomuuntimet/desimaali-oktaaliluku-muunnin'>Desimaaliluku - oktaalilukumuunnin</Link>
+                <Link to='/terveys/painoindeksilaskuri'>Painoindeksilaskuri</Link>
             </ListGroup.Item>
         </ListGroup>
+        </div>
     )
 }
 

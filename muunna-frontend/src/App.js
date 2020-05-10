@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import Menu from './components/Menu'
+import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Container, Row, Col } from 'react-bootstrap'
@@ -21,6 +21,7 @@ import LengthCon from './components/Conversion/LengthCon'
 import Math from './components/Math/Math'
 import PercentCalc from './components/Math/PercentCalc'
 import Multiplication from './components/Math/Multiplication'
+import AdditionTable from './components/Math/AdditionTable'
 import ContactForm from './components/ContactForm'
 import UrlNotFound from './components/UrlNotFound'
 
@@ -33,7 +34,7 @@ function App() {
       <Router>
         <Row className="mb-5">
           <Col lg={true}>
-            <Menu />
+            <Header />
           </Col>
         </Row>
         <Row>
@@ -43,6 +44,7 @@ function App() {
               <Route exact path="/matematiikka" render={() => <Math />} />
               <Route exact path="/matematiikka/prosenttilaskuri" render={() => <PercentCalc />} />
               <Route exact path="/matematiikka/kertotaulu" render={() => <Multiplication />} />
+              <Route exact path="/matematiikka/yhteenlasku" render={() => <AdditionTable />} />
               <Route exact path="/yksikkomuuntimet/binaari-desimaali-muunnin" render={() => <BinToDecCon />} />
               <Route exact path="/yksikkomuuntimet/desimaali-binaari-muunnin" render={() => <DecToBinCon />} />
               <Route exact path="/yksikkomuuntimet/desimaali-heksadesimaali-muunnin" render={() => <DecToHexCon />} />

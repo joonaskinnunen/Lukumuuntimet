@@ -22,6 +22,9 @@ const Multiplication = () => {
         let arr = []
         for (let i = 0; i < 10; i++) {
             arr.push(values[Math.floor(Math.random() * values.length)][Math.floor(Math.random() * 10)])
+            const uniqueSet = new Set(arr)
+            arr = [...uniqueSet]
+            arr.length < i + 1 && i--
         }
         console.log(arr)
         return arr
@@ -171,14 +174,14 @@ const Multiplication = () => {
             <Container>
             
             <Form onSubmit={handleSubmit}>
-                {quizzes.map((x, i) => <div key={i}><Row style={{borderBottom: '1px dotted black', padding: '5px', margin: '5px'}}><Col xs={4}><Form.Label as={Col} sm={4}>{x.firstNum} x {x.secondNum} = </Form.Label></Col>
-                    <Col xs={4}>
+                {quizzes.map((x, i) => <div key={i}><Row style={{borderBottom: '1px dotted black', padding: '5px', margin: '5px'}}><Col xs={4} md={3}><Form.Label>{x.firstNum} x {x.secondNum} = </Form.Label></Col>
+                    <Col xs={4} md={3}>
                         <FormControl
                             onChange={({ target }) => handleAnswerChange(target.value, i)}
                         />
                     </Col>
                     
-                {submitClicked ? x.isRightAnswer ? <Col xs={4}><p style={{color: '#4cdbc4'}}>Hyvä, oikein!</p></Col> : <Col><p style={{color: '#ff0000'}}>Väärin</p></Col>: void 0}</Row></div>)}
+                {submitClicked ? x.isRightAnswer ? <Col xs={4} md={6}><p style={{color: '#4cdbc4'}}>Hyvä, oikein!</p></Col> : <Col><p style={{color: '#ff0000'}}>Väärin</p></Col>: void 0}</Row></div>)}
                 <Form.Group as={Row}>
                     <Col>
                         <Button type="submit">Tarkista</Button>
