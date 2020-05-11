@@ -98,6 +98,7 @@ const PercentCalc = () => {
                 <br />
                 Voit myös laskea tiettyä prosenttilukua vastaavan luvun annetusta luvusta.
             </p>
+            <div className='calculator'>
             <h4>Prosenttiosuutta vastaava määrä luvusta - laskuri</h4>
             <p>
                 Syötä luku ja prosenttiosuus. Laskuri näyttää annettua prosenttiosuutta vastaavan määrän luvusta.
@@ -122,6 +123,7 @@ const PercentCalc = () => {
             </InputGroup>
             {(values.num && values.percent) &&<p><b>{values.percent}% × {values.num} = ({values.percent}/100) × {values.num} = <span style={{fontSize: '1.2em', color: '#155724'}}>{values.num * values.percent / 100}</span></b></p>}
             <Notification message={message} errorMessage={errorMessage} />
+            </div>
             <h5>Prosenttiosuutta vastaavan luvun laskeminen luvusta</h5>
             <p>
                 x% numerosta y lasketaan kaavalla:
@@ -133,6 +135,7 @@ const PercentCalc = () => {
                 <span style={{fontWeight: 'bold'}}>60% × 500 = (60 / 100) × 500 = 300</span>
                 </p>
                 <hr />
+                <div className='calculator'>
             <h4>Prosenttiosuus laskuri</h4>
             <p>Syötä laskuriin kaksi lukua. Laskuri laskee ensimmäisen luvun prosenttiosuuden toisesta luvusta.</p>
             <label><b>Luku jonka prosenttiosuus lasketaan:</b></label>
@@ -155,6 +158,7 @@ const PercentCalc = () => {
             </InputGroup>
     {(values.percentCalc.firstNum && values.percentCalc.secondNum) &&<p><b>({values.percentCalc.firstNum} / {values.percentCalc.secondNum}) × 100% = <span style={{fontSize: '1.2em', color: '#155724'}}>{(values.percentCalc.firstNum / values.percentCalc.secondNum) * 100}%</span></b></p>}
             <Notification message={percentCalcMessage} errorMessage={percentCalcErrorMessage} />
+            </div>
             <h5>Prosenttiosuuden laskeminen</h5>
                 <p>Luvun x prosenttiosuus luvusta y lasketaan kaavalla:
                 <br />

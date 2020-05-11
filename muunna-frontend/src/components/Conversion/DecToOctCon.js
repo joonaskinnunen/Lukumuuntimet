@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Notification from '../Notification'
 import { Breadcrumb } from 'react-bootstrap'
 import { LinkContainer } from "react-router-bootstrap"
 
 const DecToOctCon = () => {
-    const [decimal, setDecimal] = useState('')
+    const [decimal, setDecimal] = useState('10')
     const [oct, setOct] = useState('')
     const [message, setMessage] = useState('')
     const [errorMessage, setErrorMessage] = useState('')
@@ -38,32 +38,35 @@ const DecToOctCon = () => {
         <div>
             <Breadcrumb>
                 <LinkContainer to="../">
-                <Breadcrumb.Item>
-                Alkuun
+                    <Breadcrumb.Item>
+                        Alkuun
                 </Breadcrumb.Item>
                 </LinkContainer>
                 <LinkContainer to="./">
-                <Breadcrumb.Item>
-                Yksikkömuuntimet
+                    <Breadcrumb.Item>
+                        Yksikkömuuntimet
                 </Breadcrumb.Item>
                 </LinkContainer>
                 <Breadcrumb.Item active>
-                Desimaali-oktaalilukumuunnin
+                    Desimaali-oktaalilukumuunnin
                 </Breadcrumb.Item>
             </Breadcrumb>
             <div>
-            <h2>
-            Desimaali-oktaalilukumuunnin
+                <h2>
+                    Desimaali-oktaalilukumuunnin
             </h2>
-            <div>
-                <form>
+                <div className="calculator">
                     <p>
-                        Syötä luku: <input value={decimal} onChange={({target}) => handleChange(target.value)}>
-                        </input>
-                    </p>
-                </form>
-                <Notification message={message} result={oct} errorMessage={errorMessage} />
-            </div>
+                        Voit muuntaa tällä muuntimella niin sanotun normaalin desimaaliluvun oktaaliluvuksi. Syötä luku alla olevaan kenttään, niin näet luvun oktaalilukuna.
+                </p>
+                    <form>
+                        <p>
+                            Syötä luku: <input value={decimal} onChange={({ target }) => handleChange(target.value)}>
+                            </input>
+                        </p>
+                    </form>
+                    <Notification message={message} result={oct} errorMessage={errorMessage} />
+                </div>
             </div>
         </div>
     )

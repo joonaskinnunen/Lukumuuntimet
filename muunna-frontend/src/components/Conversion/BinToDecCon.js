@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Breadcrumb } from 'react-bootstrap'
 import { Link } from "react-router-dom"
 import Notification from '../Notification'
@@ -20,9 +20,9 @@ const BinToDecCon = () => {
 
     const handleChange = (value) => {
         setBinary(value)
-        if(validateBinary(value)) {
+        if (validateBinary(value)) {
             setDecimal(convertBinToDec(value))
-            if(value.length > 0) {
+            if (value.length > 0) {
                 setMessage(`${binary} on desimaalilukuna ${decimal}`)
                 setErrorMessage('')
             } else {
@@ -36,8 +36,8 @@ const BinToDecCon = () => {
     }
 
     const validateBinary = (bin) => {
-        for(let i = 0; i < bin.length; i++) {
-            if(bin.charAt(i) !== '0' && bin.charAt(i) !== '1' && bin.charAt(i) !== ' ') {
+        for (let i = 0; i < bin.length; i++) {
+            if (bin.charAt(i) !== '0' && bin.charAt(i) !== '1' && bin.charAt(i) !== ' ') {
                 return false
             }
         }
@@ -53,57 +53,59 @@ const BinToDecCon = () => {
         <div>
             <Breadcrumb>
                 <LinkContainer to="../">
-                <Breadcrumb.Item>
-                Alkuun
+                    <Breadcrumb.Item>
+                        Alkuun
                 </Breadcrumb.Item>
                 </LinkContainer>
                 <LinkContainer to="./">
-                <Breadcrumb.Item>
-                Yksikkömuuntimet
+                    <Breadcrumb.Item>
+                        Yksikkömuuntimet
                 </Breadcrumb.Item>
                 </LinkContainer>
                 <Breadcrumb.Item active>
-                Binääri-desimaalilukumuunnin
+                    Binääri-desimaalilukumuunnin
                 </Breadcrumb.Item>
             </Breadcrumb>
             <div>
-            <div style={{maxWidth: '90%'}}>
-            <h2>
-            Binääri-desimaalilukumuunnin
+                <div style={{ maxWidth: '90%' }}>
+                    <h2>
+                        Binääri-desimaalilukumuunnin
             </h2>
-            </div>
-            <p>Tällä muuntimella voit muuntaa binääriluvun niin sanotuksi normaaliksi luvuksi eli desimaaliluvuksi.</p>
-            <div>
-                <form>
-                    <p>
-                        <b>Syötä binääriluku:</b> <input value={binary} onChange={({target}) => handleChange(target.value)}>
-                        </input>
-                    </p>
-                </form>
-                <Notification message={message} result={decimal} errorMessage={errorMessage} />
-                <p>Katso myös <Link to="./desimaali-binaari-muunnin">desimaali-binäärilukumuunnin</Link>.</p>
+                </div>
+                <div className='calculator'>
+                    <p>Tällä muuntimella voit muuntaa binääriluvun niin sanotuksi normaaliksi luvuksi eli desimaaliluvuksi.</p>
+                    <div>
+                        <form>
+                            <p>
+                                <b>Syötä binääriluku:</b> <input value={binary} onChange={({ target }) => handleChange(target.value)}>
+                                </input>
+                            </p>
+                        </form>
+                        <Notification message={message} result={decimal} errorMessage={errorMessage} />
+                        <p>Katso myös <Link to="./desimaali-binaari-muunnin">desimaali-binäärilukumuunnin</Link>.</p>
+                    </div>
                 </div>
             </div>
             <hr />
             <h4>Desimaalijärjestelmä</h4>
             <p>Normaalisti käytämme arkielämässä normaalia 10-numeroista lukujärjestelmää (luvut 0-9), eli desimaalijärjestelmää.<br /> Numeron paikka luvussa on merkitsevä ja kullakin numerolla on erilainen painoarvo sen mukaan, mikä on numeron sijainti
             luvussa. Numeroiden painoarvot kasvavat oikealta vasemmalle: 1, 10, 100, 1000, 10000... <br />10 numerojärjestelmässä kantaluku on 10 ja numeroiden painoarvot saadaan kantaluvun potensseista: <var>1=10<sup>0</sup>, 10=10<sup>1</sup>, 100=10<sup>2</sup>, 1 000=10<sup>3</sup>, 10 000=10<sup>4</sup></var></p>
-            <img src={desimaalijarjestelma} alt='Desimaaliluku' style={{maxWidth: '80%'}}/>
+            <img src={desimaalijarjestelma} alt='Desimaaliluku' style={{ maxWidth: '80%' }} />
             <h4>Binäärijärjestelmä</h4>
             <p>
-            Binäärijärjestelmä on teknisesti yksinkertaisin lukujärjestelmä. Binäärijärjestelmä on kaksijärjestelmä, jossa tarvitaan vain kahta numeroa: 0 ja 1.
-            <img src={binaarilukutaulukko} alt='Binäärilukutaulukko' style={{maxWidth: '100%', float: 'right', margin: '20px'}}/>
-            <br />
+                Binäärijärjestelmä on teknisesti yksinkertaisin lukujärjestelmä. Binäärijärjestelmä on kaksijärjestelmä, jossa tarvitaan vain kahta numeroa: 0 ja 1.
+            <img src={binaarilukutaulukko} alt='Binäärilukutaulukko' style={{ maxWidth: '100%', float: 'right', margin: '20px' }} />
+                <br />
             Tietokoneiden on vaikeaa käyttää 10-numerojärjestelmää merkkimäärän vuoksi, joten tietokoneiden toiminta perustuukin yksinkertaisempaan binäärijärjestelmään. Binääriluvuilla on helppo esittää erilaisia ilmiöitä, kuten: sähkö kulkee / ei kulje, ovi on auki / kiinni, toimii / ei toimi ja niin edelleen.
             <br />
             Binäärilukujärjestelmässä lukujen painoarvot saadaan kantaluvun (2) potensseina, samalla tavalla kuin 10-järjestelmässä.<br />
-            <var>1=2<sup>0</sup>, 2=2<sup>1</sup>, 4=2<sup>2</sup>, 8=2<sup>3</sup>, 16=2<sup>4</sup>, 32=2<sup>5</sup>, 64=2<sup>6</sup></var><br />
+                <var>1=2<sup>0</sup>, 2=2<sup>1</sup>, 4=2<sup>2</sup>, 8=2<sup>3</sup>, 16=2<sup>4</sup>, 32=2<sup>5</sup>, 64=2<sup>6</sup></var><br />
             Lukujen painoarvot kasvaa oikealta vasemmalle: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 jne.<br />
             Yllä luetellut luvut saattaa näyttää hyvin tutuilta, koska ne tulevat jatkuvasti vastaan tietotekniikassa.
             <br />
             Binääriluku saadaan kerrottua helposti kahdella lisäämällä 0 luvun perään, eli esimerkiksi 1010B on desimaalilukuna 10 ja 10100B on desimaalilukuna 20.
-            <img src={binaarijarjestelma} alt='Binäärilukujärjestelmä' style={{maxWidth: '100%'}}/>
-            <br />
+            <img src={binaarijarjestelma} alt='Binäärilukujärjestelmä' style={{ maxWidth: '100%' }} />
+                <br />
             </p>
         </div>
     )

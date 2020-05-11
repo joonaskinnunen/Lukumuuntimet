@@ -129,7 +129,7 @@ const Multiplication = () => {
                 Klikkaamalla kertotaulun numeron kohdalta, näet laskutoimituksen ja tuloksen taulukon ylä- ja alapuolella.
             </p>
             {numbersToMultiply.result && <Notification style={notificationStyle} message={`${numbersToMultiply.firstNum} x ${numbersToMultiply.secondNum} = ${numbersToMultiply.result}`} />}
-            <Table responsive='sm' size='sm' className='table table-bordered table-hover text-center hoverCells' style={{marginBottom: '50px'}}>
+            <Table responsive='sm' size='sm' className='table table-bordered table-hover text-center hoverCells' style={{ marginBottom: '50px' }}>
                 <thead style={{ backgroundColor: 'rgb(216, 241, 230)' }}>
                     <tr>
                         {values[0].map((x, i) => i === 0 ? <th key={i} scope="col" style={{ backgroundColor: 'rgb(216, 241, 230)' }} onClick={() => handleClick({ x })} onMouseOver={changeBackground} onMouseLeave={resetThBackground}>{x.result}</th> : <td onClick={() => handleClick({ x })} onMouseOver={changeBackground} onMouseLeave={resetBackground} key={i}>{x.result}</td>)}
@@ -170,32 +170,34 @@ const Multiplication = () => {
                 </tbody>
             </Table>
             {numbersToMultiply.result && <Notification style={notificationStyle} message={`${numbersToMultiply.firstNum} x ${numbersToMultiply.secondNum} = ${numbersToMultiply.result}`} />}
-            <h3>Kertotaulu harjoituksia</h3>
-            <p>Käytä ylläolevaa kertotaulua ratkaistaksesi kertolaskut tai laske vastaukset päässälaskuna. Kun olet vastannut kaikkiin kysymyksiin, paina "Tarkista"-painiketta niin näet oikeiden vastausten määrän. Voit arpoa uudet kertolaskut painamalla "Arvo uudet kysymykset".</p>
-            <Container>
-            
-            <Form onSubmit={handleSubmit}>
-                {quizzes.map((x, i) => <div key={i}><Row style={{borderBottom: '1px dotted black', padding: '5px', margin: '5px'}}><Col xs={4} md={3}><Form.Label>{x.firstNum} x {x.secondNum} = </Form.Label></Col>
-                    <Col xs={4} md={3}>
-                        <FormControl
-                            onChange={({ target }) => handleAnswerChange(target.value, i)}
-                        />
-                    </Col>
-                    
-                {submitClicked ? x.isRightAnswer ? <Col xs={4} md={6}><p style={{color: '#4cdbc4'}}>Hyvä, oikein!</p></Col> : <Col><p style={{color: '#ff0000'}}>Väärin</p></Col>: void 0}</Row></div>)}
-                <Form.Group as={Row}>
-                    <Col>
-                        <Button type="submit">Tarkista</Button>
-                    </Col>
-                </Form.Group>
-                <Form.Group as={Row}>
-                    <Col>
-                        <Button onClick={resetQuizzes} type='reset'>Arvo uudet kysymykset</Button>
-                    </Col>
-                </Form.Group>
-            </Form>
-            </Container>
-            {submitClicked && <Notification style={notificationStyle} message={`Oikeita vastauksia ${countRightAnswers()}/10`}/>}
+            <div className="calculator">
+                <h3>Kertotaulu harjoituksia</h3>
+                <p>Käytä ylläolevaa kertotaulua ratkaistaksesi kertolaskut tai laske vastaukset päässälaskuna. Kun olet vastannut kaikkiin kysymyksiin, paina "Tarkista"-painiketta niin näet oikeiden vastausten määrän. Voit arpoa uudet kertolaskut painamalla "Arvo uudet kysymykset".</p>
+                <Container>
+
+                    <Form onSubmit={handleSubmit}>
+                        {quizzes.map((x, i) => <div key={i}><Row style={{ borderBottom: '1px dotted black', padding: '5px', margin: '5px' }}><Col xs={4} md={3}><Form.Label>{x.firstNum} x {x.secondNum} = </Form.Label></Col>
+                            <Col xs={4} md={3}>
+                                <FormControl
+                                    onChange={({ target }) => handleAnswerChange(target.value, i)}
+                                />
+                            </Col>
+
+                            {submitClicked ? x.isRightAnswer ? <Col xs={4} md={6}><p style={{ color: '#4cdbc4' }}>Hyvä, oikein!</p></Col> : <Col><p style={{ color: '#ff0000' }}>Väärin</p></Col> : void 0}</Row></div>)}
+                        <Form.Group as={Row}>
+                            <Col>
+                                <Button type="submit">Tarkista</Button>
+                            </Col>
+                        </Form.Group>
+                        <Form.Group as={Row}>
+                            <Col>
+                                <Button onClick={resetQuizzes} type='reset'>Arvo uudet kysymykset</Button>
+                            </Col>
+                        </Form.Group>
+                    </Form>
+                </Container>
+                {submitClicked && <Notification style={notificationStyle} message={`Oikeita vastauksia ${countRightAnswers()}/10`} />}
+            </div>
         </div>
     )
 }

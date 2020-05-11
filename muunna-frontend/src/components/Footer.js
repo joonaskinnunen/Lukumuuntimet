@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <Row style={style}>
                 <Col xs={5} md={4}>
-                    <p><b>Suosituimmat sivut</b>
+                    <p style={{color: '#ffffff'}}><b>Suosituimmat sivut</b>
                         <br />
                     <Link to="/terveys/painoindeksilaskuri#">Painoindeksilaskuri</Link>
                     <br />
@@ -28,7 +28,7 @@ const Footer = () => {
                 <Col xs={1} md={4}>
                 </Col>
                 <Col xs={6} md={4}>
-                    <p><b>Hyödyllisiä linkkejä</b>
+                    <p style={{color: '#ffffff'}}><b>Hyödyllisiä linkkejä</b>
                     <br />
                     <a href="https://kayttoohje.fi">Käyttöohjeet puhelimiin ja tabletteihin</a>
                     <br />

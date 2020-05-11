@@ -55,40 +55,42 @@ const VatCount = () => {
             <h2>
                 ALV-laskuri
             </h2>
-            <p>
-                Syötä laskuriin arvonlisäverollinen tai veroton hinta ja alv-prosentti. Laskuri näyttää verollisen ja verottoman hinnan ja lisäksi arvonlisäveron määrän.
+            <div className="calculator">
+                <p>
+                    Syötä laskuriin arvonlisäverollinen tai veroton hinta ja alv-prosentti. Laskuri näyttää verollisen ja verottoman hinnan ja lisäksi arvonlisäveron määrän.
             </p>
-            <label><b>Veroton hinta:</b></label>
-            <InputGroup className="mb-3">
-                <InputGroup.Prepend>
-                    <InputGroup.Text>€</InputGroup.Text>
-                </InputGroup.Prepend>
-                <FormControl
-                    onChange={({ target }) => handleValueChange(target.value)}
-                    value={valueWithoutTax}
-                />
-            </InputGroup>
-            <label><b>Verollinen hinta:</b></label>
-            <InputGroup className="mb-3">
-                <InputGroup.Prepend>
-                    <InputGroup.Text>€</InputGroup.Text>
-                </InputGroup.Prepend>
-                <FormControl
-                    onChange={({ target }) => handleValueWithTaxChange(target.value)}
-                    value={valueWithTax}
-                />
-            </InputGroup>
-            <label><b>Arvonlisäveroprosentti:</b></label>
-            <InputGroup className="mb-3">
-                <InputGroup.Prepend>
-                    <InputGroup.Text>%</InputGroup.Text>
-                </InputGroup.Prepend>
-                <FormControl
-                    onChange={({ target }) => handleVatChange(target.value)}
-                    value={vatPercent}
-                />
-            </InputGroup>
-            <p><b>Arvonlisäveron määrä: {Math.round((valueWithTax - valueWithoutTax + Number.EPSILON) * 100) / 100}€</b></p>
+                <label><b>Veroton hinta:</b></label>
+                <InputGroup className="mb-3">
+                    <InputGroup.Prepend>
+                        <InputGroup.Text>€</InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <FormControl
+                        onChange={({ target }) => handleValueChange(target.value)}
+                        value={valueWithoutTax}
+                    />
+                </InputGroup>
+                <label><b>Verollinen hinta:</b></label>
+                <InputGroup className="mb-3">
+                    <InputGroup.Prepend>
+                        <InputGroup.Text>€</InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <FormControl
+                        onChange={({ target }) => handleValueWithTaxChange(target.value)}
+                        value={valueWithTax}
+                    />
+                </InputGroup>
+                <label><b>Arvonlisäveroprosentti:</b></label>
+                <InputGroup className="mb-3">
+                    <InputGroup.Prepend>
+                        <InputGroup.Text>%</InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <FormControl
+                        onChange={({ target }) => handleVatChange(target.value)}
+                        value={vatPercent}
+                    />
+                </InputGroup>
+                <p><b>Arvonlisäveron määrä: {Math.round((valueWithTax - valueWithoutTax + Number.EPSILON) * 100) / 100}€</b></p>
+            </div>
             <hr />
             <hr />
             <h3>Arvonlisäveron laskeminen</h3>

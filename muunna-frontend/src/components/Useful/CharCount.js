@@ -9,20 +9,20 @@ const CharCount = () => {
     })
 
     const [string, setString] = useState('')
-    const [results, setResults] = useState({length: {chars: 0, charsWithoutSpaces: 0}, words: {popularWords: [], numOfWords: 0, avgLength: 0}, sentences: 0, newLines: 0})
+    const [results, setResults] = useState({ length: { chars: 0, charsWithoutSpaces: 0 }, words: { popularWords: [], numOfWords: 0, avgLength: 0 }, sentences: 0, newLines: 0 })
 
     const handleChange = (value) => {
         setString(value)
-        setResults({...results, words: countWords(value), length: countChar(value), sentences: countSentences(value), newLines: countNewLines(value)})
-        if(value.length === 0) {
-            setResults({length: {chars: 0, charsWithoutSpaces: 0}, words: {popularWords: [], numOfWords: 0, avgLength: 0}, sentences: 0, newLines: 0})
+        setResults({ ...results, words: countWords(value), length: countChar(value), sentences: countSentences(value), newLines: countNewLines(value) })
+        if (value.length === 0) {
+            setResults({ length: { chars: 0, charsWithoutSpaces: 0 }, words: { popularWords: [], numOfWords: 0, avgLength: 0 }, sentences: 0, newLines: 0 })
         }
     }
 
     const countChar = (value) => {
         let spaces = 0
-        for(let i = 0; i < value.length; i++) {
-            if(value.charAt(i).match(/\s+$/)) {
+        for (let i = 0; i < value.length; i++) {
+            if (value.charAt(i).match(/\s+$/)) {
                 spaces++
             }
         }
@@ -33,20 +33,20 @@ const CharCount = () => {
     }
 
     const countWords = (value) => {
-        let str = value.replace(/(^\s*)|(\s*$)/gi,'')
+        let str = value.replace(/(^\s*)|(\s*$)/gi, '')
         str = str.replace(/[\r\n\u0085\u2028\u2029]+/g, ' ')
-        str = str.replace(/[ ]{2,}/gi,' ')
-        str = str.replace(/\n /,"\n")
+        str = str.replace(/[ ]{2,}/gi, ' ')
+        str = str.replace(/\n /, "\n")
         str = str.split(' ')
         str = str.map((x) => x.replace(/[.,;:!?]/g, ''))
         let counts = {}
-        str.forEach(function(x) { counts[x.toLowerCase()] = (counts[x.toLowerCase()] || 0)+1 })
+        str.forEach(function (x) { counts[x.toLowerCase()] = (counts[x.toLowerCase()] || 0) + 1 })
         let wordsArr = Object.entries(counts)
         wordsArr = wordsArr.sort((a, b) => b[1] - a[1])
         let sumOfLengths = 0
         wordsArr.map(x => sumOfLengths += x[0].length * x[1])
         let words = {
-            popularWords: wordsArr.length > 10 ? wordsArr.splice(9, wordsArr.length-1) : wordsArr,
+            popularWords: wordsArr.length > 10 ? wordsArr.splice(9, wordsArr.length - 1) : wordsArr,
             numOfWords: str.length,
             avgLength: sumOfLengths / str.length
         }
@@ -55,7 +55,7 @@ const CharCount = () => {
 
     const countSentences = (value) => {
         let numOfSentences = value.replace(/(\.+|:|!|\?)("*|'*|\)*|}*|]*)(\s|\n|\r|\r\n)/gm, "$1$2|").split("|").length
-        if(value.charAt(value.length - 1) === ' ' && value.charAt(value.length - 2) === '.') {
+        if (value.charAt(value.length - 1) === ' ' && value.charAt(value.length - 2) === '.') {
             numOfSentences--
         }
         return numOfSentences
@@ -63,12 +63,12 @@ const CharCount = () => {
 
     const countNewLines = (value) => {
         let newLines = value.split(/\r\n|\r|\n/).length
-        for(let i = value.length - 1; i > 0; i--) {
-            if(value.charAt(i).match(/\r\n|\r|\n/) && value.charAt(i-1).match(/\r\n|\r|\n/)) {
+        for (let i = value.length - 1; i > 0; i--) {
+            if (value.charAt(i).match(/\r\n|\r|\n/) && value.charAt(i - 1).match(/\r\n|\r|\n/)) {
                 newLines--
             }
         }
-        if(value.charAt(value.length-1).match(/\r\n|\r|\n/)) {
+        if (value.charAt(value.length - 1).match(/\r\n|\r|\n/)) {
             newLines--
         }
         return newLines
@@ -83,59 +83,60 @@ const CharCount = () => {
             <Breadcrumb>
                 <LinkContainer to="../../">
                     <Breadcrumb.Item>
-                    Alkuun
+                        Alkuun
                     </Breadcrumb.Item>
                 </LinkContainer>
                 <LinkContainer to="../">
                     <Breadcrumb.Item>
-                    Hyöty
+                        Hyöty
                     </Breadcrumb.Item>
                 </LinkContainer>
                 <Breadcrumb.Item active>
-                Sanalaskuri
+                    Sanalaskuri
                 </Breadcrumb.Item>
             </Breadcrumb>
             <h2>
                 Sanalaskuri
             </h2>
-            <p>
-                Sanalaskuri / merkkilaskuri laskee syötetyn tekstin merkkien ja sanojen määrän.
+            <div className="calculator">
+                <p>
+                    Sanalaskuri / merkkilaskuri laskee syötetyn tekstin merkkien ja sanojen määrän.
             </p>
-            <p><b>Teksti sisältää <b>{results.length.charsWithoutSpaces}</b> merkkiä ja <b>{results.words.numOfWords}</b> sanaa.</b></p>
-            <div className="input-group">
-                <div className="input-group-prepend">
-                    <span className="input-group-text" id="basic-addon">
-                    <i className="fas fa-pencil-alt prefix"></i>
-                    </span>
+                <p><b>Teksti sisältää <b>{results.length.charsWithoutSpaces}</b> merkkiä ja <b>{results.words.numOfWords}</b> sanaa.</b></p>
+                <div className="input-group">
+                    <div className="input-group-prepend">
+                        <span className="input-group-text" id="basic-addon">
+                            <i className="fas fa-pencil-alt prefix"></i>
+                        </span>
+                    </div>
+                    <textarea className="form-control" rows="10" value={string} onChange={({ target }) => handleChange(target.value)} placeholder='Syötä tekstisi tähän. Tämä sanalaskuri / merkkilaskuri laskee tekstin merkkien ja sanojen määrän.'></textarea>
                 </div>
-                <textarea className="form-control" rows="10" value={string} onChange={({target}) => handleChange(target.value)} placeholder='Syötä tekstisi tähän. Tämä sanalaskuri / merkkilaskuri laskee tekstin merkkien ja sanojen määrän.'></textarea>
+                <p style={pStyle}>Teksti sisältää:</p>
+                <ul>
+                    <li>
+                        <b>{results.length.charsWithoutSpaces}</b> merkkiä
+                </li>
+                    <li>
+                        <b>{results.length.chars}</b> merkkiä välilyönnit ja rivinvaihdot mukaan luettuna
+                </li>
+                    <li>
+                        <b>{results.words.numOfWords}</b> sanaa
+                </li>
+                    <li>
+                        <b>{results.sentences}</b> lausetta
+                </li>
+                    <li>
+                        <b>{results.newLines}</b> kappaletta
+                </li>
+                    <li>
+                        <b>{Math.round(results.words.avgLength * 100) / 100}</b> kirjainta keskimäärin sanassa
+                </li>
+                </ul>
+                <p>Eniten toistuvat sanat:</p>
+                <ul>
+                    {results.words.popularWords.map(x => <li key={x}>{x[0]} (<b>{x[1]}</b> kpl. <b>{Math.round(x[1] / results.words.numOfWords * 100 * 100) / 100}</b> %)</li>)}
+                </ul>
             </div>
-            <p style={pStyle}>Teksti sisältää:</p>
-            <ul>
-                <li>
-                    <b>{results.length.charsWithoutSpaces}</b> merkkiä
-                </li>
-                <li>
-                    <b>{results.length.chars}</b> merkkiä välilyönnit ja rivinvaihdot mukaan luettuna
-                </li>
-                <li>
-                    <b>{results.words.numOfWords}</b> sanaa
-                </li>
-                <li>
-                <b>{results.sentences}</b> lausetta
-                </li>
-                <li>
-                <b>{results.newLines}</b> kappaletta
-                </li>
-                <li>
-                <b>{Math.round(results.words.avgLength * 100) / 100}</b> kirjainta keskimäärin sanassa
-                </li>
-            </ul>
-            <p>Eniten toistuvat sanat:</p>
-            <ul>
-                {results.words.popularWords.map(x => <li key={x}>{x[0]} (<b>{x[1]}</b> kpl. <b>{Math.round(x[1] / results.words.numOfWords * 100 * 100) / 100}</b> %)</li>)}
-            </ul>
-            <hr />
             <p><b>Merkkilaskuri / sanalaskuri</b> on laskuri, jolla voit laskea syötetyn tekstin merkkien, lauseiden, kappaleiden ja sanojen määrän. Laskuri näyttää myös tekstissä yleisimmin esiintyvät sanat ja sanojen keskimääräisen pituuden.</p>
             <p>Voit liittää haluamasi tekstin esimerkiksi Wordista tai muusta tekstinkäsittelyohjelmasta tai vaikka verkkosivulta laskurin tekstikenttään ja laskuri näyttää merkkien ja sanojen määrän ja muut tiedot tekstistä.</p>
             <p>Voit hyödyntää sanalaskuria esimerkiksi jos kirjoitat esseetä ja esseen on täytettävä vähimmäis-sanamäärä.</p>
