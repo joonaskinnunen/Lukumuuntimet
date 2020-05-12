@@ -4,7 +4,7 @@ import { LinkContainer } from "react-router-bootstrap"
 import Notification from '../Notification'
 
 const PercentCalc = () => {
-    const [values, setValues] = useState({ calc: { num: '', percent: '' }, percentCalc: { firstNum: '', secondNum: '' }, percentChangeCalc: { firstNum: '', secondNum: '' } })
+    const [values, setValues] = useState({ calc: { num: '', percent: '' }, percentCalc: { firstNum: '', secondNum: '' }, percentChangeCalc: { firstNum: '', secondNum: '' }, percentDecConv: {percent: '', num: ''} })
     const [message, setMessage] = useState('')
     const [errorMessage, setErrorMessage] = useState('')
     const [percentCalcMessage, setPercentCalcMessage] = useState('')
@@ -50,7 +50,7 @@ const PercentCalc = () => {
             setPercentCalcErrorMessage('Syötetty luku ei ole numero')
         } else if (value.length !== 0) {
             setValues({ ...values, percentCalc: { ...values.percentCalc, firstNum: value } })
-            values.percentCalc.secondNum.length > 0 ? setPercentCalcMessage(`${value} luvusta ${values.percentCalc.secondNum} on ${(value / values.percentCalc.secondNum) * 100}%`) : setPercentCalcMessage("Syötä molemmat luvut")
+            values.percentCalc.secondNum.length > 0 ? setPercentCalcMessage(`${value} on ${(value / values.percentCalc.secondNum) * 100}% luvusta ${values.percentCalc.secondNum}`) : setPercentCalcMessage("Syötä molemmat luvut")
         } else {
             setPercentCalcMessage('')
             setPercentCalcErrorMessage('')
@@ -64,7 +64,7 @@ const PercentCalc = () => {
             setPercentCalcErrorMessage('Syötetty luku ei ole numero')
         } else if (value.length !== 0) {
             setValues({ ...values, percentCalc: { ...values.percentCalc, secondNum: value } })
-            values.percentCalc.firstNum.length > 0 ? setPercentCalcMessage(`${values.percentCalc.firstNum} luvusta ${value} on ${(values.percentCalc.firstNum / value) * 100}%`) : setPercentCalcMessage("Syötä molemmat luvut")
+            values.percentCalc.firstNum.length > 0 ? setPercentCalcMessage(`${values.percentCalc.firstNum} on ${(values.percentCalc.firstNum / value) * 100}% luvusta ${value}`) : setPercentCalcMessage("Syötä molemmat luvut")
         } else {
             setPercentCalcMessage('')
             setPercentCalcErrorMessage('')
@@ -153,8 +153,8 @@ const PercentCalc = () => {
                         <InputGroup.Text>%</InputGroup.Text>
                     </InputGroup.Prepend>
                 </InputGroup>
+                <Notification message={message} errorMessage={errorMessage} result={(values.calc.num && values.calc.percent) ? values.calc.num * values.calc.percent / 100 : ''} />
                 {(values.calc.num && values.calc.percent) && <p><b>{values.calc.percent}% × {values.calc.num} = ({values.calc.percent}/100) × {values.calc.num} = <span style={{ fontSize: '1.2em', color: '#155724' }}>{values.calc.num * values.calc.percent / 100}</span></b></p>}
-                <Notification message={message} errorMessage={errorMessage} />
             </div>
             <h5>Prosenttiosuutta vastaavan luvun laskeminen luvusta</h5>
             <p>
@@ -191,7 +191,7 @@ const PercentCalc = () => {
                     </InputGroup.Prepend>
                 </InputGroup>
                 {(values.percentCalc.firstNum && values.percentCalc.secondNum) && <p><b>({values.percentCalc.firstNum} / {values.percentCalc.secondNum}) × 100% = <span style={{ fontSize: '1.2em', color: '#155724' }}>{(values.percentCalc.firstNum / values.percentCalc.secondNum) * 100}%</span></b></p>}
-                <Notification message={percentCalcMessage} errorMessage={percentCalcErrorMessage} />
+                <Notification message={percentCalcMessage} errorMessage={percentCalcErrorMessage} result={(values.percentCalc.firstNum && values.percentCalc.secondNum) ? (values.percentCalc.firstNum / values.percentCalc.secondNum) * 100 + '%' : ''} />
             </div>
             <h5>Prosenttiosuuden laskeminen</h5>
             <p>Luvun x prosenttiosuus luvusta y lasketaan kaavalla:
@@ -227,7 +227,7 @@ const PercentCalc = () => {
                     </InputGroup.Prepend>
                 </InputGroup>
                 {(values.percentChangeCalc.firstNum && values.percentChangeCalc.secondNum) && <p><b>100% × ({values.percentChangeCalc.secondNum} - {values.percentChangeCalc.firstNum}) / {values.percentChangeCalc.firstNum} = <span style={{ fontSize: '1.2em', color: '#155724' }}>{100 * (values.percentChangeCalc.secondNum - values.percentChangeCalc.firstNum) / values.percentChangeCalc.firstNum}%</span></b></p>}
-                <Notification message={percentChangeCalcMessage} errorMessage={percentChangeCalcErrorMessage} />
+                <Notification message={percentChangeCalcMessage} errorMessage={percentChangeCalcErrorMessage}  result={(values.percentChangeCalc.firstNum && values.percentChangeCalc.secondNum) ? 100 * (values.percentChangeCalc.secondNum - values.percentChangeCalc.firstNum) / values.percentChangeCalc.firstNum + '%' : ''}/>
             </div>
             <h5>Muutosprosentti</h5>
             <p>Muutosprosentti x1:stä x2:ksi lasketaan kaavalla:

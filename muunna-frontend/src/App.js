@@ -8,6 +8,7 @@ import BinToDecCon from './components/Conversion/BinToDecCon'
 import DecToBinCon from './components/Conversion/DecToBinCon'
 import DecToHexCon from './components/Conversion/DecToHexCon'
 import DecToOctCon from './components/Conversion/DecToOctCon'
+import PercDecCon from './components/Conversion/PercDecCon'
 import Useful from './components/Useful/Useful'
 import CharCount from './components/Useful/CharCount'
 import VatCount from './components/Finance/VatCount'
@@ -15,6 +16,7 @@ import BMICalc from './components/Health/BMICalc'
 import Home from './components/Home'
 import Footer from './components/Footer'
 import Finance from './components/Finance/Finance'
+import ExchangeRates from './components/Finance/ExchangeRates'
 import Health from './components/Health/Health'
 import Conversion from './components/Conversion/Conversion'
 import LengthCon from './components/Conversion/LengthCon'
@@ -51,10 +53,12 @@ function App() {
               <Route exact path="/yksikkomuuntimet/desimaali-binaari-muunnin" render={() => <DecToBinCon />} />
               <Route exact path="/yksikkomuuntimet/desimaali-heksadesimaali-muunnin" render={() => <DecToHexCon />} />
               <Route exact path="/yksikkomuuntimet/desimaali-oktaaliluku-muunnin" render={() => <DecToOctCon />} />
+              <Route exact path="/yksikkomuuntimet/prosentti-desimaalimuunnin" render={() => <PercDecCon />} />
               <Route exact path="/hyoty" render={() => <Useful />} />
               <Route exact path="/hyoty/merkki-ja-sanalaskuri" render={() => <CharCount />} />
               <Route exact path="/raha" render={() => <Finance />} />
               <Route exact path="/raha/alv-laskuri" render={() => <VatCount />} />
+              <Route exact path="/raha/valuuttalaskuri" render={() => <ExchangeRates />} />
               <Route exact path="/terveys" render={() => <Health />} />
               <Route exact path="/terveys/painoindeksilaskuri" render={() => <BMICalc />} />
               <Route exact path="/yksikkomuuntimet" render={() => <Conversion />} />
