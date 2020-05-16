@@ -85,9 +85,10 @@ const ExchangeRates = () => {
     useEffect(() => {
         document.title = 'Valuuttalaskuri / valuuttamuunnin - Laske & Muunna'
         axios
-            .get("https://api.exchangeratesapi.io/latest")
+            .get('https://api.exchangeratesapi.io/latest')
             .then(response => {
-                setLastUpdated(response.data.date)
+                const lastUpdated = response.data.date.split('-').reverse().join('.')
+                setLastUpdated(lastUpdated)
                 let arr = Object.entries(response.data.rates)
                 for (let i = 0; i < arr.length; i++) {
                     arr[i].push(getCurrencyFromCode(arr[i][0]))
@@ -133,9 +134,9 @@ const ExchangeRates = () => {
     }
 
     const handleSecondCurrencyChange = (value) => {
-        const factor = exchangeRates[selectedCurrencies.firstNum.currency][1] / exchangeRates[value][1]
-        setSelectedCurrencies({ firstNum: { ...selectedCurrencies.firstNum, inputValue: selectedCurrencies.secondNum.inputValue * factor }, secondNum: { ...selectedCurrencies.secondNum, currency: value } })
-        setMessage(`${selectedCurrencies.secondNum.inputValue} ${exchangeRates[value][2]} on ${selectedCurrencies.secondNum.inputValue * factor} ${exchangeRates[selectedCurrencies.firstNum.currency][2]}`)
+        const factor = exchangeRates[value][1] / exchangeRates[selectedCurrencies.firstNum.currency][1]
+        setSelectedCurrencies({ firstNum: { ...selectedCurrencies.firstNum }, secondNum: { ...selectedCurrencies.secondNum, inputValue: selectedCurrencies.firstNum.inputValue * factor, currency: value } })
+        setMessage(`${selectedCurrencies.firstNum.inputValue} ${exchangeRates[selectedCurrencies.firstNum.currency][2]} on ${selectedCurrencies.firstNum.inputValue * factor} ${exchangeRates[value][2]}`)
     }
 
     return (
@@ -160,6 +161,12 @@ const ExchangeRates = () => {
                     Valuuttalaskuri / valuuttamuunnin
                 </h2>
                 <div className="calculator">
+                    <p>Valuuttalaskurilla voit muuttaa valitun valuutan arvon toiseen valuuttaan.</p>
+                    <p>Valitse ensin alkuperäinen valuutta ja syötä vaihdettavan valuutan määrä. Tämän jälkeen valitse valuutta, johon arvo muutetaan.
+                        <br />
+                        Kun syötät uuden arvon jompaan kumpaan kentistä, toisen valuutan vastaava arvo päivittyy toiseen kenttään.
+                    </p>
+                    <p>Valuuttalaskurin kurssit haetaan Euroopan keskuspankin tietokannasta.</p>Va
                     <p>
                     </p>
                     <form>

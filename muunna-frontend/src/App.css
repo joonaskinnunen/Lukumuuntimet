@@ -30,6 +30,18 @@ h1, h2, h3, h4, h5 {
   border-radius: 5px;
 }
 
+.prettyTable th, .prettyTable td {
+  padding: 5px;
+  border: 1px #aaaaaa solid;
+  text-align: center;
+}
+
+.prettyTable {
+  float: right;
+  margin: 10px;
+  border-collapse: collapse;
+}
+
 p {
   font-family: 'Open Sans',sans-serif;
   color: #313030;

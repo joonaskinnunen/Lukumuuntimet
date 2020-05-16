@@ -28,7 +28,6 @@ const Multiplication = () => {
             arr = [...uniqueSet]
             arr.length < i + 1 && i--
         }
-        console.log(arr)
         return arr
     }
 
@@ -59,27 +58,18 @@ const Multiplication = () => {
     const countRightAnswers = () => {
         let count = 0
         quizzes.map(x => x.isRightAnswer && count++)
-        console.log(count)
         return count
     }
 
     const handleAnswerChange = (value, i) => {
         setSubmitClicked(false)
         let updatedQuizzes = [...quizzes]
-        console.log(typeof (i))
-        console.log(typeof (value))
         if (value === quizzes[i].result.toString()) {
-            console.log('Oikein')
             updatedQuizzes[i].isRightAnswer = true
         } else {
             updatedQuizzes[i].isRightAnswer = false
-            console.log('Väärin')
         }
         setQuizzes(updatedQuizzes)
-        console.log('value ', value)
-        console.log('i', i)
-        console.log('quizzes', quizzes)
-        quizzes[i].isRightAnswer ? console.log('oikea vastaus') : console.log('väärä vastaus')
     }
 
     const notificationStyle = {
