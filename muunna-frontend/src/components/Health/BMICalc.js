@@ -76,7 +76,7 @@ const BMICalc = () => {
                 </InputGroup>
                 <h4>Painoindeksisi on {Math.round((values.bmi + Number.EPSILON) * 100) / 100}</h4>
             </div>
-            <table className="table">
+            <table responsive className="table">
                 <thead className="thead-light">
                     <tr>
                         <th scope="col">Paino kategoria</th>

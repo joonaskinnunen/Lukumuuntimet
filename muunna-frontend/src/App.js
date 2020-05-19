@@ -35,9 +35,9 @@ function App() {
   return (
     <Container style={containerStyle} className="mb-5">
       <Router>
-        <Row className="mb-5">
+        <Row className="mb-5" style={{marginBottom: '1rem !important'}}>
           <Col lg={true}>
-            <Header />
+            <Header/>
           </Col>
         </Row>
         <Row>

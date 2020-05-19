@@ -10,11 +10,15 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white !important;
+}
+
+.navbar-dark .navbar-brand {
+  color: white !important;
 }
 
 a {
-  color: #4cdbc4;
+  color: #4cdbc4 !important;
 }
 
 h1, h2, h3, h4, h5 {
@@ -65,7 +69,7 @@ p {
 }
 
 .mb-5, .my-5 {
-  margin-bottom: 1rem!important;
+  margin-bottom: 1rem !important;
 }
 
 .iconsStyle {

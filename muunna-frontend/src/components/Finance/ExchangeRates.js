@@ -166,7 +166,7 @@ const ExchangeRates = () => {
                         <br />
                         Kun syötät uuden arvon jompaan kumpaan kentistä, toisen valuutan vastaava arvo päivittyy toiseen kenttään.
                     </p>
-                    <p>Valuuttalaskurin kurssit haetaan Euroopan keskuspankin tietokannasta.</p>Va
+                    <p>Valuuttalaskurin kurssit haetaan Euroopan keskuspankin tietokannasta.</p>
                     <p>
                     </p>
                     <form>
