@@ -38,7 +38,7 @@ const Footer = () => {
                     </p>
                 </Col>
             <Col style={{marginTop: '10px'}} xs={12}>
-                ©2020 Laske & Muunna
+                ©2021 Laske & Muunna
             </Col>
         </Row>
     )

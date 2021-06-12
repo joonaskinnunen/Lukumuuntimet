@@ -4,7 +4,7 @@ import { LinkContainer } from "react-router-bootstrap"
 import Notification from '../Notification'
 
 const LengthCon = () => {
-    const [values, setValues] = useState({ millimeter: 10, centimeter: 1, inch: 0.393700787, meter: 0.01, kilometer: 0.00001, message: '', errorMessage: '' })
+    const [values, setValues] = useState({ millimeter: 10, centimeter: 1, inch: 0.393700787, meter: 0.01, kilometer: 0.00001, mail: 0.00001609, message: '', errorMessage: '' })
 
     useEffect(() => {
         document.title = 'Pituusmuunnin / etäisyysmuunnin - Laske & Muunna'
@@ -13,15 +13,17 @@ const LengthCon = () => {
     const handleChange = (obj) => {
         obj.value = obj.value.toString().replace(/,/g, '.')
         switch (obj.unit) {
-            case 'mm': isNaN(obj.value) ? setValues({ ...values, millimeter: obj.value, centimeter: 0, inch: 0, kilometer: 0, meter: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, millimeter: obj.value, centimeter: obj.value / 10, inch: obj.value * 0.0393700787, kilometer: obj.value / 1000000, meter: obj.value / 1000, errorMessage: '' })
+            case 'mm': isNaN(obj.value) ? setValues({ ...values, millimeter: obj.value, centimeter: 0, inch: 0, kilometer: 0, meter: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, millimeter: obj.value, centimeter: obj.value / 10, inch: obj.value * 0.0393700787, kilometer: obj.value / 1000000, meter: obj.value / 1000, mail: obj.value * 0.00000062137, errorMessage: '' })
                 break
-            case 'cm': isNaN(obj.value) ? setValues({ ...values, centimeter: obj.value, inch: 0, kilometer: 0, meter: 0, millimeter: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, millimeter: obj.value * 10, centimeter: obj.value, inch: obj.value * 0.393700787, kilometer: obj.value / 100000, meter: obj.value / 100, errorMessage: '' })
+            case 'cm': isNaN(obj.value) ? setValues({ ...values, centimeter: obj.value, inch: 0, kilometer: 0, meter: 0, millimeter: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, millimeter: obj.value * 10, centimeter: obj.value, inch: obj.value * 0.393700787, kilometer: obj.value / 100000, meter: obj.value / 100, mail: obj.value * 0.0000062137, errorMessage: '' })
                 break
-            case 'm': isNaN(obj.value) ? setValues({ ...values, meter: obj.value, inch: 0, kilometer: 0, millimeter: 0, centimeter: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, meter: obj.value, millimeter: obj.value * 1000, centimeter: obj.value * 100, inch: obj.value * 100 * 0.393700787, kilometer: obj.value / 1000, errorMessage: '' })
+            case 'm': isNaN(obj.value) ? setValues({ ...values, meter: obj.value, inch: 0, kilometer: 0, millimeter: 0, centimeter: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, meter: obj.value, millimeter: obj.value * 1000, centimeter: obj.value * 100, inch: obj.value * 100 * 0.393700787, kilometer: obj.value / 1000, mail: obj.value * 0.00062137, errorMessage: '' })
                 break
-            case 'km': isNaN(obj.value) ? setValues({ ...values, kilometer: obj.value, inch: 0, meter: 0, millimeter: 0, centimeter: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, kilometer: obj.value, centimeter: obj.value * 100000, inch: obj.value * 100000 * 0.393700787, meter: obj.value * 1000, millimeter: obj.value * 1000000, errorMessage: '' })
+            case 'km': isNaN(obj.value) ? setValues({ ...values, kilometer: obj.value, inch: 0, meter: 0, millimeter: 0, centimeter: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, kilometer: obj.value, centimeter: obj.value * 100000, inch: obj.value * 100000 * 0.393700787, meter: obj.value * 1000, millimeter: obj.value * 1000000, mail: obj.value * 0.62137, errorMessage: '' })
                 break
-            case 'inch': isNaN(obj.value) ? setValues({ ...values, inch: obj.value, meter: 0, millimeter: 0, centimeter: 0, kilometer: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, inch: obj.value, centimeter: obj.value * 2.54, meter: obj.value * 2.54 / 100, kilometer: obj.value * 2.54 / 100000, millimeter: obj.value * 25.4, errorMessage: '' })
+            case 'inch': isNaN(obj.value) ? setValues({ ...values, inch: obj.value, meter: 0, millimeter: 0, centimeter: 0, kilometer: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, inch: obj.value, centimeter: obj.value * 2.54, meter: obj.value * 2.54 / 100, kilometer: obj.value * 2.54 / 100000, millimeter: obj.value * 25.4, mail: obj.value * 0.000015783, errorMessage: '' })
+                break
+            case 'mail': isNaN(obj.value) ? setValues({ ...values, mail: obj.value, meter: 0, millimeter: 0, centimeter: 0, kilometer: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, mail: obj.value, centimeter: obj.value * 1.609344 * 100000, meter: obj.value * 1.609344 * 1000, kilometer: obj.value * 1.609344, millimeter: obj.value * 1.609344 * 1000000, inch: obj.value * 63360.23622 , errorMessage: '' })
                 break
             default: setValues({ millimeter: 10, centimeter: 1, inch: 0.393700787, meter: 0.01, kilometer: 0.00001, message: '', errorMessage: '' })
 
@@ -50,7 +52,7 @@ const LengthCon = () => {
             </h2>
             <div className="calculator">
                 <p>
-                    Syötä arvo johonkin alla olevan laskurin kentistä. Laskuri näyttää muiden yksiköiden muunnetut arvot. Voit muuntaa muuntimella esimerkiksi senttimetrit tuumiksi, millimetrit kilometreiksi tai toisinpäin.
+                    Syötä arvo johonkin alla olevan laskurin kentistä. Laskuri näyttää muiden yksiköiden muunnetut arvot. Voit muuntaa muuntimella esimerkiksi senttimetrit tuumiksi, millimetrit kilometreiksi, mailit kilometreiksi tai toisinpäin.
             </p>
                 <Notification message={values.message} errorMessage={values.errorMessage} />
                 <label><b>Millimetri:</b></label>
@@ -101,6 +103,16 @@ const LengthCon = () => {
                     />
                     <InputGroup.Prepend>
                         <InputGroup.Text>tuuma</InputGroup.Text>
+                    </InputGroup.Prepend>
+                </InputGroup>
+                <label><b>Maili:</b></label>
+                <InputGroup className="mb-3">
+                    <FormControl
+                        onChange={({ target }) => handleChange({ unit: 'mail', value: target.value })}
+                        value={values.mail || ''}
+                    />
+                    <InputGroup.Prepend>
+                        <InputGroup.Text>maili</InputGroup.Text>
                     </InputGroup.Prepend>
                 </InputGroup>
                 <Notification message={values.message} errorMessage={values.errorMessage} />
