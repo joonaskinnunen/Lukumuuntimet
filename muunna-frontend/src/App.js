@@ -9,6 +9,7 @@ import DecToBinCon from './components/Conversion/DecToBinCon'
 import DecToHexCon from './components/Conversion/DecToHexCon'
 import DecToOctCon from './components/Conversion/DecToOctCon'
 import PercDecCon from './components/Conversion/PercDecCon'
+import DecPercCon from './components/Conversion/DecPercCon'
 import Useful from './components/Useful/Useful'
 import CharCount from './components/Useful/CharCount'
 import VatCount from './components/Finance/VatCount'
@@ -54,6 +55,7 @@ function App() {
               <Route exact path="/yksikkomuuntimet/desimaali-heksadesimaali-muunnin" render={() => <DecToHexCon />} />
               <Route exact path="/yksikkomuuntimet/desimaali-oktaaliluku-muunnin" render={() => <DecToOctCon />} />
               <Route exact path="/yksikkomuuntimet/prosentti-desimaalimuunnin" render={() => <PercDecCon />} />
+              <Route exact path="/yksikkomuuntimet/desimaali-prosenttilukumuunnin" render={() => <DecPercCon />} />
               <Route exact path="/hyoty" render={() => <Useful />} />
               <Route exact path="/hyoty/merkki-ja-sanalaskuri" render={() => <CharCount />} />
               <Route exact path="/raha" render={() => <Finance />} />

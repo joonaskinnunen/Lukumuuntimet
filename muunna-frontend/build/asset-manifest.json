@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3bdf1236.chunk.css",
+    "main.js": "/static/js/main.3dac1027.chunk.js",
+    "main.js.map": "/static/js/main.3dac1027.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.cff9e4b0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.cff9e4b0.js.map",
+    "static/js/2.f9d39bed.chunk.js": "/static/js/2.f9d39bed.chunk.js",
+    "static/js/2.f9d39bed.chunk.js.map": "/static/js/2.f9d39bed.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.354ffa50861a13d5879dc978c92e39e2.js": "/precache-manifest.354ffa50861a13d5879dc978c92e39e2.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.3bdf1236.chunk.css.map": "/static/css/main.3bdf1236.chunk.css.map",
+    "static/js/2.f9d39bed.chunk.js.LICENSE.txt": "/static/js/2.f9d39bed.chunk.js.LICENSE.txt",
+    "static/media/binaarilukutaulukko.png": "/static/media/binaarilukutaulukko.fdcbcf04.png",
+    "static/media/desimaali.png": "/static/media/desimaali.d1fbb4cb.png",
+    "static/media/logo.svg": "/static/media/logo.24db57c4.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cff9e4b0.js",
+    "static/js/2.f9d39bed.chunk.js",
+    "static/css/main.3bdf1236.chunk.css",
+    "static/js/main.3dac1027.chunk.js"
+  ]
+}

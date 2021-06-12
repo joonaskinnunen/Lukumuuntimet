@@ -61,6 +61,7 @@ const PercDecCon = () => {
                     {(percent && decimal) && <p><b>{percent}% / 100% = <span style={{ fontSize: '1.2em', color: '#155724' }}>{percent / 100}</span></b></p>}
                     <Notification message={message} result={decimal} errorMessage={errorMessage} />
                 </div>
+                <p>Voit muuntaa luvut toisinpäin <Link to="/yksikkomuuntimet/desimaali-prosenttilukumuunnin">Desimaali-prosenttilukumuuntimella</Link></p>
                 <p>Katso myös <Link to="/matematiikka/prosenttilaskuri">prosenttilaskuri</Link>. Prosenttilaskurista löydät monia erilaisia prosenttilukuihin liittyviä laskureita.</p>
             </div>
             <h3>Prosenttiluvun muuttaminen desimaaliluvuksi</h3>

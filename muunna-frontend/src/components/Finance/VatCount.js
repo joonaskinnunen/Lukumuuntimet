@@ -38,12 +38,12 @@ const VatCount = () => {
     return (
         <div>
             <Breadcrumb>
-                <LinkContainer to="../../">
+                <LinkContainer to="../">
                     <Breadcrumb.Item>
                         Alkuun
                     </Breadcrumb.Item>
                 </LinkContainer>
-                <LinkContainer to="../">
+                <LinkContainer to="./">
                     <Breadcrumb.Item>
                         Raha ja talous
                     </Breadcrumb.Item>

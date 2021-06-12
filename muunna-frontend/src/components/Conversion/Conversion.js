@@ -50,6 +50,9 @@ const Conversion = () => {
                 <LinkContainer to="/yksikkomuuntimet/prosentti-desimaalimuunnin">
                     <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Prosentti-desimaalilukumuunnin</Nav.Link>
                 </LinkContainer>
+                <LinkContainer to="/yksikkomuuntimet/desimaali-prosenttilukumuunnin">
+                    <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Desimaali-prosenttilukumuunnin</Nav.Link>
+                </LinkContainer>
             </Nav>
             <div style={contentStyle}>
                 <p>Sivuiltamme löydät muuntimia, joilla voit muuntaa erilaisia mittayksiköitä. Voit esimerkiksi muuntaa <a href="https://www.laskejamuunna.fi/yksikkomuuntimet/pituusmuunnin">senttimetrit tuumiksi</a> tai toisinpäin, <a href="https://www.laskejamuunna.fi/yksikkomuuntimet/pituusmuunnin">tuumat senttimetreiksi</a>. </p>
