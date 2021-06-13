@@ -32,7 +32,7 @@ const Useful = () => {
                 Erilaisia hyödyllisiä laskimia arkisiin ja vähemmän arkisiin ongelmiin.
             </p>
             <Nav fill variant="tabs" className="flex-column">
-                <LinkContainer to="/hyoty/merkki-ja-sanalaskuri/">
+                <LinkContainer to="/hyoty/merkki-ja-sanalaskuri">
                     <Nav.Link><i className="fas fa-sort-amount-down iconsStyle"></i>Sanalaskuri</Nav.Link>
                 </LinkContainer>
             </Nav>
@@ -41,7 +41,7 @@ const Useful = () => {
                     Hyöty-osiosta löydät erilaisia laskimia ja muuntimia arkisiin asioihin.
                 </p>
                 <p>
-                    Voit esimerkiksi laskea tekstin sanojen ja merkkien määrän <Link to="/hyoty/merkki-ja-sanalaskuri/">sanalaskurilla</Link>.
+                    Voit esimerkiksi laskea tekstin sanojen ja merkkien määrän <Link to="/hyoty/merkki-ja-sanalaskuri">sanalaskurilla</Link>.
                 </p>
             </div>
         </div>

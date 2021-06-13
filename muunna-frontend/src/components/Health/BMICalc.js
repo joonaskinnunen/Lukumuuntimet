@@ -22,12 +22,12 @@ const BMICalc = () => {
     return (
         <div>
             <Breadcrumb>
-                <LinkContainer to="../../">
+                <LinkContainer to="../">
                     <Breadcrumb.Item>
                         Alkuun
                     </Breadcrumb.Item>
                 </LinkContainer>
-                <LinkContainer to="../">
+                <LinkContainer to="./">
                     <Breadcrumb.Item>
                         Terveys
                     </Breadcrumb.Item>

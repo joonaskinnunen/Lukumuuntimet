@@ -22,19 +22,19 @@ const Home = () => {
                 Sivustoltamme löydät laskimia ja muuntimia erilaisiin käyttötarpeisiin.
             </p>
             <Nav fill variant="tabs" className="flex-column">
-                <LinkContainer to="/yksikkomuuntimet/">
+                <LinkContainer to="/yksikkomuuntimet">
                     <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Yksikkömuuntimet</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/matematiikka/">
+                <LinkContainer to="/matematiikka">
                     <Nav.Link><i className="fas fa-square-root-alt iconsStyle"></i>Matematiikka</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/hyoty/">
+                <LinkContainer to="/hyoty">
                     <Nav.Link><i className="fas fa-star-of-life iconsStyle"></i>Hyöty</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/raha/">
+                <LinkContainer to="/raha">
                     <Nav.Link><i className="fas fa-euro-sign iconsStyle"></i> Raha ja talous</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/terveys/">
+                <LinkContainer to="/terveys">
                     <Nav.Link><i className="fas fa-heartbeat iconsStyle"></i>Terveys</Nav.Link>
                 </LinkContainer>
             </Nav>

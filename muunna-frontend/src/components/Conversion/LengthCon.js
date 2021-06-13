@@ -23,7 +23,7 @@ const LengthCon = () => {
                 break
             case 'inch': isNaN(obj.value) ? setValues({ ...values, inch: obj.value, meter: 0, millimeter: 0, centimeter: 0, kilometer: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, inch: obj.value, centimeter: obj.value * 2.54, meter: obj.value * 2.54 / 100, kilometer: obj.value * 2.54 / 100000, millimeter: obj.value * 25.4, mail: obj.value * 0.000015783, errorMessage: '' })
                 break
-            case 'mail': isNaN(obj.value) ? setValues({ ...values, mail: obj.value, meter: 0, millimeter: 0, centimeter: 0, kilometer: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, mail: obj.value, centimeter: obj.value * 1.609344 * 100000, meter: obj.value * 1.609344 * 1000, kilometer: obj.value * 1.609344, millimeter: obj.value * 1.609344 * 1000000, inch: obj.value * 63360.23622 , errorMessage: '' })
+            case 'mail': isNaN(obj.value) ? setValues({ ...values, mail: obj.value, meter: 0, millimeter: 0, centimeter: 0, kilometer: 0, errorMessage: 'Virheellinen luku' }) : setValues({ ...values, mail: obj.value, centimeter: obj.value * 1.609344 * 100000, meter: obj.value * 1.609344 * 1000, kilometer: obj.value * 1.609344, millimeter: obj.value * 1.609344 * 1000000, inch: obj.value * 63360.23622, errorMessage: '' })
                 break
             default: setValues({ millimeter: 10, centimeter: 1, inch: 0.393700787, meter: 0.01, kilometer: 0.00001, message: '', errorMessage: '' })
 
@@ -117,6 +117,52 @@ const LengthCon = () => {
                 </InputGroup>
                 <Notification message={values.message} errorMessage={values.errorMessage} />
             </div>
+            <h4>Esimerkkejä pituusyksiköiden muuntamisesta toiseen</h4>
+            <p>Pituuden SI-järjestelmän mukainen perusyksikkö on metri. Esimerkiksi metrien muuttaminen kilometreiksi tai senttimetreiksi on monelle luonnostaan helppoa omassa päässä ilman laskinta. Kuitenkin metrien muuttaminen esimerkiksi tuumiksi tai maileiksi voi olla haastavampaa. Alla muutamia yleisimpiä kaavoja pituusyksiköiden muuntamisesta toiseen</p>
+            <h5>Mailit kilometreiksi</h5>
+            <p>Yksi maili on 1,609 km. Yksi kilometri on 0,621 mailia.</p>
+            <p>Mailit muutetaan kilometreiksi kaavalla: kilometrit * 1,609</p>
+            <p>
+                1 mi = 1 * 1,609 = 1,61 km
+            <br />
+                2 mi = 2 * 1,609 = 3,22 km
+            <br />
+                5 mi = 5 * 1,609 = 8,05 km
+            <br />
+                157 mi = 157 * 1,609 = 252,67 km
+                </p>
+            <h5>Kilometrit maileiksi</h5>
+            <p>Kilometrit muutetaan maileiksi kaavalla: kilometrit * 0,621</p>
+            <p>
+                1 km = 1 * 0,621 = 0,621 mi
+            <br />
+                2 km = 2 * 0,621 = 1,243 mi
+            <br />
+                5 km = 5 * 0,621 = 3,107 mi
+            <br />
+                157 km = 157 * 0,621 = 97,555 mi
+                </p>
+            <h5>Tuumat metreiksi</h5>
+            <p>Tuumat muutetaan metreiksi kaavalla: tuumat * 0,0254</p>
+            <p>
+                1 in = 1 * 0,0254 = 0,0254 m
+            <br />
+                2 in = 2 * 0,0254 = 0,051 m
+            <br />
+                5 in = 5 * 0,0254 = 0,127 m
+            <br />
+                157 in = 1 * 0,0254 = 3,988 m
+                </p>
+            <h5>Metrit tuumiksi</h5>
+            <p>Metrit muutetaan tuumiksi kaavalla: metrit * 39,37</p>
+             <p>   1 m = 1 * 39,37 = 39,37 in
+            <br />
+                2 m = 2 * 39,37 = 78,74 in
+            <br />
+                5 m = 5 * 39,37 = 196,85 in
+            <br />
+                157 m = 157 * 39,37 = 6181,1 in
+                </p>
         </div>
     )
 }

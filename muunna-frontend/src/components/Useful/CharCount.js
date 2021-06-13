@@ -81,12 +81,12 @@ const CharCount = () => {
     return (
         <div>
             <Breadcrumb>
-                <LinkContainer to="../../">
+                <LinkContainer to="../">
                     <Breadcrumb.Item>
                         Alkuun
                     </Breadcrumb.Item>
                 </LinkContainer>
-                <LinkContainer to="../">
+                <LinkContainer to="./">
                     <Breadcrumb.Item>
                         Hyöty
                     </Breadcrumb.Item>

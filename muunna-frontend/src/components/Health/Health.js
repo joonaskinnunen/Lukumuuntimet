@@ -37,7 +37,7 @@ const Finance = () => {
                 Erilaisia hyödyllisiä terveyteen ja jokapäiväiseen elämään liittyviä laskimia ja muuntimia.
             </p>
             <Nav fill variant="tabs" className="flex-column">
-                <LinkContainer to="/terveys/painoindeksilaskuri/">
+                <LinkContainer to="/terveys/painoindeksilaskuri">
                     <Nav.Link><i className="fas fa-weight" style={iconsStyle}></i>Painoindeksilaskuri</Nav.Link>
                 </LinkContainer>
             </Nav>
