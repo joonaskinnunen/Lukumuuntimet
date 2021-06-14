@@ -72,7 +72,7 @@ const PercDecCon = () => {
                 Esimerkkejä prosentti-desimaali muunnoksista:
                 <br />
                 <span style={{ fontSize: '1.3em' }}>
-                1% = 1 / 100 = 0.01
+                    1% = 1 / 100 = 0.01
                 <br />
                 5% = 5/100 = 0.05
                 <br />

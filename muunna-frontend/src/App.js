@@ -57,7 +57,7 @@ function App() {
               <Route exact path="/yksikkomuuntimet/desimaali-oktaaliluku-muunnin" render={() => <DecToOctCon />} />
               <Route exact path="/yksikkomuuntimet/prosentti-desimaalimuunnin" render={() => <PercDecCon />} />
               <Route exact path="/yksikkomuuntimet/desimaali-prosenttilukumuunnin" render={() => <DecPercCon />} />
-              <Route exact path="/yksikkomuuntimet/kengänkoko-muunnin" render={() => <ShoeSizeCon />} />
+              <Route exact path="/yksikkomuuntimet/kengankoko-muunnin" render={() => <ShoeSizeCon />} />
               <Route exact path="/hyoty" render={() => <Useful />} />
               <Route exact path="/hyoty/merkki-ja-sanalaskuri" render={() => <CharCount />} />
               <Route exact path="/raha" render={() => <Finance />} />

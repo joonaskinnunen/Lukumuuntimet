@@ -13,4 +13,4 @@ require("babel-register")({
       );
   }
   
-  generateSitemap();
+  generateSitemap()

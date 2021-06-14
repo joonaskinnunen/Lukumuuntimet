@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router'
+import ShoeSizeCon from './components/Conversion/ShoeSizeCon'
 
 export default (
     <Route>
@@ -18,6 +19,7 @@ export default (
             <Route path="/terveys/painoindeksilaskuri" render={() => <BMICalc />} />
             <Route exact path="/yksikkomuuntimet" render={() => <Conversion />} />
             <Route path="/yksikkomuuntimet/pituusmuunnin" render={() => <LengthCon />} />
+            <Route path="/yksikkomuuntimet/kengänkoko-muunnin" render={() => <ShoeSizeCon />} />
             <Route exact path="/ota-yhteytta" render={() => <ContactForm />} />
     </Route>
 )

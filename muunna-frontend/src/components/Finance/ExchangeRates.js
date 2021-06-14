@@ -77,15 +77,291 @@ const ExchangeRates = () => {
                 return 'Islannin kruunu'
             case 'MXN':
                 return 'Meksikon peso'
+            case 'AED':
+                return 'Yhdistyneiden arabiemiirikuntien dirhami'
+            case 'AFN':
+                return 'Afganistanin afgaani'
+            case 'ALL':
+                return 'Albanian lek'
+            case 'AMD':
+                return 'Armenian dram'
+            case 'ANG':
+                return 'Alankomaiden Antillien guldeni'
+            case 'AOA':
+                return 'Angolan kwanza'
+            case 'ARS':
+                return 'Argentiinan peso'
+            case 'AWG':
+                return 'Aruban floriini'
+            case 'AZN':
+                return 'Azerbaidžanin manat'
+            case 'BAM':
+                return 'Bosnian ja Hertsegovinan vaihdettava markka'
+            case 'BBD':
+                return 'Barbadoksen dollari'
+            case 'BDT':
+                return 'Bangladeshin taka'
+            case 'BHD':
+                return 'Bahrainin dinaari'
+            case 'BIF':
+                return 'Burundin frangi'
+            case 'BMD':
+                return 'Bermudan dollari'
+            case 'BND':
+                return 'Brunein dollari'
+            case 'BOB':
+                return 'Bolivian boliviano'
+            case 'BSD':
+                return 'Bahaman dollari'
+            case 'BTC':
+                return 'Bitcoin'
+            case 'BTN':
+                return 'Bhutanin ngultrum'
+            case 'BWP':
+                return 'Botswanan pula'
+            case 'BYN':
+                return 'Valko-Venäjän rupla'
+            case 'BZD':
+                return 'Belizen dollari'
+            case 'CDF':
+                return 'Kongon frangi'
+            case 'CLF':
+                return 'Chilen unidades de fomento'
+            case 'CLP':
+                return 'Chilen peso'
+            case 'CNH':
+                return 'Kiinan Offshore Yuan'
+            case 'COP':
+                return 'Kolumbian peso'
+            case 'CRC':
+                return 'Costa Rican colón'
+            case 'CUC':
+                return 'Kuuban Convertible peso'
+            case 'CUP':
+                return 'Kuuban peso'
+            case 'CVE':
+                return 'Kap Verden escudo'
+            case 'DJF':
+                return 'Djiboutin frangi'
+            case 'DOP':
+                return 'Dominikaanisen tasavallan peso'
+            case 'DZD':
+                return 'Algerian dinaari'
+            case 'EGP':
+                return 'Egyptin punta'
+            case 'ERN':
+                return 'Eritrean nakfa'
+            case 'ETB':
+                return 'Etiopian birr'
+            case 'EUR':
+                return 'Euro'
+            case 'FJD':
+                return 'Fidžin dollari'
+            case 'FKP':
+                return 'Falklandin punta'
+            case 'GEL':
+                return 'Georgian lari'
+            case 'GGP':
+                return 'Guernseyn punta'
+            case 'GHS':
+                return 'Ghanan cedi'
+            case 'GIP':
+                return 'Gibraltarin punta'
+            case 'GMD':
+                return 'Gambian dalasi'
+            case 'GNF':
+                return 'Guinean frangi'
+            case 'GTQ':
+                return 'Guatemalan quetzal'
+            case 'GYD':
+                return 'Guyanan dollari'
+            case 'HNL':
+                return 'Hondurasin lempira'
+            case 'HTG':
+                return 'Haitin gourde'
+            case 'IMP':
+                return 'Mansaaren punta'
+            case 'IQD':
+                return 'Irakin dinaari'
+            case 'IRR':
+                return 'Iranin rial'
+            case 'JEP':
+                return 'Jerseyn punta'
+            case 'JMD':
+                return 'Jamaikan dollari'
+            case 'JOD':
+                return 'Jordanian dinaari'
+            case 'KES':
+                return 'Kenian šillinki'
+            case 'KGS':
+                return 'Kirgisian som'
+            case 'KHR':
+                return 'Kambodžan riel'
+            case 'KMF':
+                return 'Komorien frangi'
+            case 'KPW':
+                return 'Pohjois-Korean Won'
+            case 'KWD':
+                return 'Kuwaitin dinaari'
+            case 'KYD':
+                return 'Caymansaarten dollari'
+            case 'KZT':
+                return 'Kazakstanin tenge'
+            case 'LAK':
+                return 'Laosin kip'
+            case 'LBP':
+                return 'Libanonin punta'
+            case 'LKR':
+                return 'Sri Lankan rupia'
+            case 'LRD':
+                return 'Liberian dollari'
+            case 'LSL':
+                return 'Lesothon loti'
+            case 'LYD':
+                return 'Libyan dinaari'
+            case 'MAD':
+                return 'Marokon dirham'
+            case 'MDL':
+                return 'Moldovan leu'
+            case 'MGA':
+                return 'Madagaskarin ariary'
+            case 'MKD':
+                return 'Pohjois-Makedonian denaari'
+            case 'MMK':
+                return 'Myanmarin kyat'
+            case 'MNT':
+                return 'Mongolian tugrik'
+            case 'MOP':
+                return 'Macaon pataca'
+            case 'MRO':
+                return 'Mauritanian ouguiya'
+            case 'MRU':
+                return 'Mauritanian ouguiya'
+            case 'MUR':
+                return 'Mauritiuksen rupia'
+            case 'MVR':
+                return 'Malediivien rufiyaa'
+            case 'MWK':
+                return 'Malawin kwacha'
+            case 'MZN':
+                return 'Mosambikin metical'
+            case 'NAD':
+                return 'Namibian dollari'
+            case 'NGN':
+                return 'Nigerian naira'
+            case 'NIO':
+                return 'Nicaraguan córdoba'
+            case 'NPR':
+                return 'Nepalin rupia'
+            case 'OMR':
+                return 'Omanin rial'
+            case 'PAB':
+                return 'Panaman balboa'
+            case 'PEN':
+                return 'Perun sol'
+            case 'PGK':
+                return 'Papua-Uuden-Guinean kina'
+            case 'PKR':
+                return 'Pakistanin rupia'
+            case 'PYG':
+                return 'Paraguayn guaraní'
+            case 'QAR':
+                return 'Qatarin rial'
+            case 'RSD':
+                return 'Serbian dinaari '
+            case 'RWF':
+                return 'Ruandan frangi'
+            case 'SAR':
+                return 'Saudi-Arabian rial'
+            case 'SBD':
+                return 'Salomonsaarten dollari'
+            case 'SCR':
+                return 'Seychellien rupia'
+            case 'SDG':
+                return 'Sudanin punta'
+            case 'SHP':
+                return 'Saint Helenan punta'
+            case 'SLL':
+                return 'Sierra Leonen leone'
+            case 'SOS':
+                return 'Somalian šillinki'
+            case 'SRD':
+                return 'Surinamen dollari'
+            case 'SSP':
+                return 'Etelä-Sudanin punta'
+            case 'STD':
+                return 'Sao Tome Dobra'
+            case 'STN':
+                return 'São Tomén ja Príncipen dobra'
+            case 'SVC':
+                return 'El Salvadorin colón'
+            case 'SYP':
+                return 'Syyrian punta'
+            case 'SZL':
+                return 'Swazimaan lilangeni'
+            case 'TJS':
+                return 'Tadžikistanin somoni'
+            case 'TMT':
+                return 'Turkmenistanin manat'
+            case 'TND':
+                return 'Tunisian dinaari'
+            case 'TOP':
+                return 'Tongan paʻanga'
+            case 'TTD':
+                return 'Trinidadin ja Tobagon dollari'
+            case 'TWD':
+                return 'Uusi Taiwanin dollari'
+            case 'TZS':
+                return 'Tansanian šillinki'
+            case 'UAH':
+                return 'Ukrainan hryvnia'
+            case 'UGX':
+                return 'Ugandan šillinki'
+            case 'UYU':
+                return 'Uruguayn peso'
+            case 'UZS':
+                return 'Uzbekistanin som'
+            case 'VES':
+                return 'Venezuelan bolivar'
+            case 'VND':
+                return 'Vietnamin đồng'
+            case 'VUV':
+                return 'Vanuatu Vatu'
+            case 'WST':
+                return 'Samoan tala'
+            case 'XAF':
+                return 'Keski-Afrikan CFA-frangi'
+            case 'XAG':
+                return 'Hopea'
+            case 'XAU':
+                return 'Kulta'
+            case 'XCD':
+                return 'Itä-Karibian dollari'
+            case 'XDR':
+                return 'Erityisnosto-oikeudet '
+            case 'XOF':
+                return 'CFA-frangi'
+            case 'XPF':
+                return 'Ranskan Tyynenmeren frangi'
+            case 'YER':
+                return 'Jemenin rial'
+            case 'ZMW':
+                return 'Sambian kwacha'
+            case 'ZWL':
+                return 'Zimbabwen dollari'
             default:
-                return 'Valuutan nimi'
+                return ''
+            case 'XPD':
+                return 'Unssia Palladium'
+            case 'XPT':
+                return 'Unssia Platinum'
         }
     }
 
     useEffect(() => {
         document.title = 'Valuuttalaskuri / valuuttamuunnin - Laske & Muunna'
         axios
-            .get('https://api.exchangeratesapi.io/latest')
+            .get('https://api.exchangerate.host/latest')
             .then(response => {
                 const lastUpdated = response.data.date.split('-').reverse().join('.')
                 setLastUpdated(lastUpdated)
@@ -106,7 +382,7 @@ const ExchangeRates = () => {
         } else if (value !== 0) {
             const factor = exchangeRates[selectedCurrencies.secondNum.currency][1] / exchangeRates[selectedCurrencies.firstNum.currency][1]
             setSelectedCurrencies({ secondNum: { ...selectedCurrencies.secondNum, inputValue: value * factor }, firstNum: { ...selectedCurrencies.firstNum, inputValue: value } })
-            value.length > 0 ? setMessage(`${value} ${exchangeRates[selectedCurrencies.firstNum.currency][2]} on ${value * factor} ${exchangeRates[selectedCurrencies.secondNum.currency][2]}`) : setMessage('')
+            value.length > 0 ? setMessage(`${value} ${exchangeRates[selectedCurrencies.firstNum.currency][2]} on ${parseFloat(value * factor).toFixed(3)} ${exchangeRates[selectedCurrencies.secondNum.currency][2]}`) : setMessage('')
         } else {
             setMessage('')
             setErrorMessage('')
@@ -120,7 +396,7 @@ const ExchangeRates = () => {
         } else if (value !== 0) {
             const factor = exchangeRates[selectedCurrencies.firstNum.currency][1] / exchangeRates[selectedCurrencies.secondNum.currency][1]
             setSelectedCurrencies({ firstNum: { ...selectedCurrencies.firstNum, inputValue: value * factor }, secondNum: { ...selectedCurrencies.secondNum, inputValue: value } })
-            value.length > 0 ? setMessage(`${value} ${exchangeRates[selectedCurrencies.secondNum.currency][2]} on ${value * factor} ${exchangeRates[selectedCurrencies.firstNum.currency][2]}`) : setMessage('')
+            value.length > 0 ? setMessage(`${value} ${exchangeRates[selectedCurrencies.secondNum.currency][2]} on ${parseFloat(value * factor).toFixed(3)} ${exchangeRates[selectedCurrencies.firstNum.currency][2]}`) : setMessage('')
         } else {
             setMessage('')
             setErrorMessage('')
@@ -209,7 +485,7 @@ const ExchangeRates = () => {
                     <tr>
                         <th scope="row">Valuutta</th>
                         <th scope="row">Valuuttakoodi</th>
-                        <th scope="row">EUR</th>
+                        <th scope="row">1 EURO =</th>
                     </tr>
                     {exchangeRates.map((x, i) => <tr key={i}><td>{x[2]}</td><td>{x[0]}</td><td>{x[1]}</td></tr>)}
                     <tr>

@@ -30,28 +30,16 @@ const ShoeSizeCon = () => {
     }
 
     const onChangeSizeFrom = (e) => {
-        console.log(e.target.value)
         const message = getMessage(e.target.value, values.unitFrom, values.unitTo, values.sizeOptions.indexOf(parseFloat(e.target.value)))
         setValues({ ...values, size: e.target.value, index: values.sizeOptions.indexOf(parseFloat(e.target.value)), message: message })
-        //   setValues({...values, message: getMessage()})
-        console.log(values)
-        console.log(e.target.value)
-        console.log(parseFloat(e.target.value))
-        console.log(typeof (e.target.value))
-        console.log(values.sizeOptions.indexOf(parseFloat(e.target.value)))
     }
 
     const onChangeUnitFrom = (e) => {
-        console.log(e.target.value)
         const message = getMessage(sizes[e.target.value][0], e.target.value, values.unitTo, 0)
         setValues({ ...values, unitFrom: e.target.value, sizeOptions: sizes[e.target.value], message: message })
-        //    setValues({...values, message: message}) */
-        console.log(values)
-        console.log(values.sizeOptions.indexOf(values.size))
     }
 
     const onChangeUnitTo = (e) => {
-        console.log(e.target.value)
         const message = getMessage(sizes[values.unitFrom][0], values.unitFrom, e.target.value, 0)
         setValues({ ...values, unitTo: e.target.value, message: message })
     }

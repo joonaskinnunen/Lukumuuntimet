@@ -53,7 +53,7 @@ const Conversion = () => {
                 <LinkContainer to="/yksikkomuuntimet/desimaali-prosenttilukumuunnin">
                     <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Desimaali-prosenttilukumuunnin</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/yksikkomuuntimet/kengänkoko-muunnin">
+                <LinkContainer to="/yksikkomuuntimet/kengankoko-muunnin">
                     <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Kengän koko-muunnin</Nav.Link>
                 </LinkContainer>
             </Nav>
