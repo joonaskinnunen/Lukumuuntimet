@@ -22,6 +22,9 @@ const Sidebar = () => {
             <ListGroup.Item>
                 <Link to='/yksikkomuuntimet/kengankoko-muunnin'>Kengän koko-muunnin</Link>
             </ListGroup.Item>
+            <ListGroup.Item>
+                <Link to='/raha/valuuttalaskuri'>Valuuttalaskuri / valuuttamuunnin</Link>
+            </ListGroup.Item>
         </ListGroup>
         </div>
     )

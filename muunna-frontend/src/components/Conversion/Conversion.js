@@ -56,6 +56,12 @@ const Conversion = () => {
                 <LinkContainer to="/yksikkomuuntimet/kengankoko-muunnin">
                     <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Kengän koko-muunnin</Nav.Link>
                 </LinkContainer>
+                <LinkContainer to="/yksikkomuuntimet/celsius-fahrenheit-muunnin">
+                    <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Celsius-Fahrenheit-muunnin</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/yksikkomuuntimet/fahrenheit-celsius-muunnin">
+                    <Nav.Link><i className="fas fa-exchange-alt iconsStyle"></i>Fahrenheit-Celsius-muunnin</Nav.Link>
+                </LinkContainer>
             </Nav>
             <div style={contentStyle}>
                 <p>Sivuiltamme löydät muuntimia, joilla voit muuntaa erilaisia mittayksiköitä. Voit esimerkiksi muuntaa <a href="https://www.laskejamuunna.fi/yksikkomuuntimet/pituusmuunnin">senttimetrit tuumiksi</a> tai toisinpäin, <a href="https://www.laskejamuunna.fi/yksikkomuuntimet/pituusmuunnin">tuumat senttimetreiksi</a>. </p>
